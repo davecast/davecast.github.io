@@ -1,20 +1,20 @@
 <template>
   <div>
-    <homeHero />
+    <about-hero />
   </div>
 </template>
 
 <script>
-import homeHero from "@/components/partials/home/hero";
+import aboutHero from "@/components/partials/about/hero"
 
 export default {
-  name: "Inicio",
+  name: "SobreMi",
   components: {
-    homeHero
+    aboutHero
   },
   head() {
     return {
-      title: "David Castillo"
+      title: "David Castillo | Sobre mi"
     };
   }
 };

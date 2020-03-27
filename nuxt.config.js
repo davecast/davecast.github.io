@@ -27,6 +27,5 @@ export default {
   generate: {
     fallback: true,
     interval: 100
-  },
-  
+  }
 }
