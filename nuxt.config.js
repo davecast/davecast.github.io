@@ -27,5 +27,9 @@ export default {
   generate: {
     fallback: true,
     interval: 100
+  },
+  layoutTransition: {
+    name: 'layout',
+    mode: 'out-in'
   }
 }

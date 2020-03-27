@@ -1,14 +1,13 @@
-<template>
-  <div>
-    Error
-  </div>
-</template>
+<template> </template>
 
 <script>
 export default {
-  components: {},
-  data() {
-    return {};
-  }
+  props: {
+    error: {
+      type: Object,
+      required: true
+    }
+  },
+  layout: "404"
 };
 </script>
