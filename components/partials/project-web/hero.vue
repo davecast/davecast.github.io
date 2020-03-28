@@ -1,5 +1,5 @@
 <template>
-  <Banner
+  <dc-banner
       align-content="flex-start"
       class="text--center"
       type="small"
@@ -17,15 +17,15 @@
           completos.
         </p>
       </div>
-    </Banner>
+    </dc-banner>
 </template>
 
 <script>
-import Banner from "@/components/commons/Banner.vue"
+import DcBanner from "@/components/commons/DcBanner.vue"
 
 export default {
   components: {
-    Banner
+    DcBanner
   }
 };
 </script>

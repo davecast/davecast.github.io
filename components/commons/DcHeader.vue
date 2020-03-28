@@ -42,7 +42,7 @@
               >
             </li>
           </ul>
-         <Social
+         <dc-social
             facebook="https://www.facebook.com/davecast.works"
             instagram="https://www.instagram.com/davecast/"
             linkedin="https://www.linkedin.com/in/davecast/"
@@ -60,13 +60,13 @@
 </template>
 
 <script>
-import Social from "@/components/commons/Social.vue";
+import DcSocial from "@/components/commons/DcSocial.vue";
 //import Flags from "@/components/Flags.vue";
 
 export default {
   name: "DcHeader",
   components: {
-    Social
+    DcSocial
   },
   data() {
     return {
@@ -172,6 +172,9 @@ export default {
 .header__menu--list {
   margin-left: 30px;
 }
+.header__menu--list:first-child {
+  margin: 0;
+}
 .header__menu a {
   color: #cccccc;
   text-transform: capitalize;
@@ -193,7 +196,8 @@ export default {
   color: #0099cc;
 }
 .header__transparent {
-  position: fixed;
+  position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
   background-color: transparent;

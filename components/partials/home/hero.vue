@@ -1,5 +1,5 @@
 <template>
-  <Banner
+  <dc-banner
     align-content="flex-start"
     class="text--center"
     type="small"
@@ -18,25 +18,25 @@
       </p>
     </div>
     <div>
-      <DcButton
+      <dc-button
         border-radius="50px"
         background="0099cc"
         color="fff"
         routeLink="/sobre-mi"
       >
         conoce más de mi
-      </DcButton>
+      </dc-button>
     </div>
-  </Banner>
+  </dc-banner>
 </template>
 
 <script>
-import Banner from "@/components/commons/Banner.vue";
+import DcBanner from "@/components/commons/DcBanner.vue";
 import DcButton from "@/components/commons/DcButton.vue";
 
 export default {
   components: {
-    Banner,
+    DcBanner,
     DcButton
   }
 };

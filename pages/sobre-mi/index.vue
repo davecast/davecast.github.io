@@ -1,16 +1,23 @@
 <template>
   <div>
     <about-hero />
+    <home-center-section />
+    <home-bottom-section />
   </div>
 </template>
 
 <script>
 import aboutHero from "@/components/partials/about/hero"
 
+import homeCenterSection from "@/components/partials/home/centerSection";
+import homeBottomSection from "@/components/partials/home/bottomSection";
+
 export default {
   name: "SobreMi",
   components: {
-    aboutHero
+    aboutHero,
+    homeCenterSection,
+    homeBottomSection
   },
   head() {
     return {

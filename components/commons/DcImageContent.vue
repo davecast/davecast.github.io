@@ -19,6 +19,14 @@ export default {
 </script>
 
 <style scoped>
+.image__768 {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.image__1024 {
+  max-width: 1024px;
+  margin: 0 auto;
+}
 figure {
   max-width: 100%;
 }

@@ -1,7 +1,7 @@
 <template>
-  <Banner
+  <dc-banner
       align-content="flex-end"
-      class="text--center"
+      class="text--center separator__bottom--35"
       img="top__back.jpg"
     >
       <div class="grid grid__gap--30 grid__6__6">
@@ -35,16 +35,16 @@
           />
         </div>
       </div>
-    </Banner>
+    </dc-banner>
 </template>
 
 <script>
-import Banner from "@/components/commons/Banner.vue"
+import DcBanner from "@/components/commons/DcBanner.vue"
 import DcImageContent from "@/components/commons/DcImageContent.vue"
 
 export default {
   components: {
-    Banner,
+    DcBanner,
     DcImageContent
   }
 };

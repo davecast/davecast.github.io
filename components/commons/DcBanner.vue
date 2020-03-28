@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: "Banner",
+  name: "DcBanner",
   props: {
     type: {
       type: String,
@@ -174,7 +174,7 @@ export default {
   bottom: -2px;
 }
 .banner__title--text {
-  width: 540px;
+  max-width: 540px;
   margin: 0 auto;
 }
 .banner__title--text p {

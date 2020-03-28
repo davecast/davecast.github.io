@@ -59,7 +59,10 @@ export default {
           this.alignItems === "right" ? "0px 15px 0px 0px" : "0px 0px 0px 15px"
       }
     };
-  }
+  },
+  mounted() {
+    console.log(this.$props)
+  },
 };
 </script>
 

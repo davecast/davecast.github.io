@@ -1,19 +1,25 @@
 <template>
   <div>
     <home-hero />
-    <home-callings />
+    <home-top-section />
+    <home-center-section />
+    <home-bottom-section />
   </div>
 </template>
 
 <script>
 import homeHero from "@/components/partials/home/hero";
-import homeCallings from "@/components/partials/home/callings";
+import homeTopSection from "@/components/partials/home/topSection";
+import homeCenterSection from "@/components/partials/home/centerSection";
+import homeBottomSection from "@/components/partials/home/bottomSection";
 
 export default {
   name: "Inicio",
   components: {
     homeHero,
-    homeCallings
+    homeTopSection,
+    homeCenterSection,
+    homeBottomSection
   },
   head() {
     return {
