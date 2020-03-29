@@ -19,6 +19,14 @@ export default {
 </script>
 
 <style scoped>
+.image__80--percent {
+  width: 80%;
+  margin: 0 auto;
+}
+.image__595 {
+  max-width: 595px;
+  margin: 0 auto;
+}
 .image__768 {
   max-width: 768px;
   margin: 0 auto;

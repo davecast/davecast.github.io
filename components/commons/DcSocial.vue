@@ -59,10 +59,7 @@ export default {
           this.alignItems === "right" ? "0px 15px 0px 0px" : "0px 0px 0px 15px"
       }
     };
-  },
-  mounted() {
-    console.log(this.$props)
-  },
+  }
 };
 </script>
 
@@ -80,10 +77,20 @@ a {
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
+
+.footer__social li {
+  margin: 0 20px 0 0 !important;
+}
+.footer__social li:last-child {
+  margin: 0 !important;
+}
+.footer__social a {
+  color: #fff;
+  font-size: 24px;
+}
 a:hover {
   color: #0099cc;
 }
-
 @media screen and (max-width: 768px) {
   footer .social li:last-child {
     margin: 0 !important;

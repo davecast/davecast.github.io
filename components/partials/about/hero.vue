@@ -12,7 +12,7 @@
             Sobre mi
           </h1>
           <div class="banner__title--text banner__title--left ">
-            <p class="text--normal mb--x3 text--left">
+            <p class="text--big mb--x3 text--left">
               Soy un Desarrollador Web y Diseñador Gráfico de Maracaibo,
               Venezuela.
             </p>

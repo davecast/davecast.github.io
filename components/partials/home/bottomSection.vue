@@ -1,5 +1,5 @@
 <template>
-  <section class="section center__bottom__back">
+  <section class="section bottom__back">
     <div class="container">
       <div class="grid grid__4__8 grid__gap--30">
         <div class="grid__area--1">

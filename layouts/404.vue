@@ -10,7 +10,7 @@
         img="top__back.jpg"
       >
         <dc-image-content
-          class="image__768"
+          class="image__595"
           source="web__404.png"
           altText="Pagona no encontrada error 404"
         />
@@ -94,6 +94,7 @@ export default {
   padding-top: 70px;
 }
 .section__404__end {
-  padding-bottom: 150px;
+  height: 100vh;
+  max-height: 100vh;
 }
 </style>

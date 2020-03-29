@@ -101,7 +101,6 @@
   content: "\e922";
 }
 
-
 body {
   margin: 0px;
   font-family: "Raleway", sans-serif;
@@ -119,8 +118,9 @@ figure {
   font-size: 0;
 }
 a {
+  cursor: pointer;
   text-decoration: none;
-  font-family: "Muli", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 h1,
 h2,
@@ -199,11 +199,41 @@ p {
 .grid__v__self--center {
   align-self: center;
 }
+.grid__h__self--center {
+  justify-self: center;
+}
 
+.bottom__back::before,
+.bottom__back::after,
 .center__bottom__back,
 .center__top__back {
   background-size: auto 550px;
   background-repeat: no-repeat;
+}
+.bottom__back {
+  position: relative;
+}
+.bottom__back .container {
+  z-index: 2;
+}
+.bottom__back::before,
+.bottom__back::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.bottom__back::before {
+  background-position: top center;
+  background-image: url("~static/image/center__bottom__back.jpg");
+}
+.bottom__back::after {
+  background-position: bottom center;
+  background-image: url("~static/image/center__top__back.jpg");
 }
 .center__top__back {
   background-position: bottom center;
@@ -217,14 +247,31 @@ p {
 .back--grey {
   background-color: #f4f4f4;
 }
+.back--blue {
+  background-color: #0099cc;
+}
+.back--greenblue {
+  background-color: #003c4c;
+}
 
-
+.text--raleway {
+  font-family: "Raleway", sans-serif;
+}
 .text--montserrat {
   font-family: "Montserrat", sans-serif;
 }
 .text--reey {
   font-family: "Reey", sans-serif;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
+}
+.text--300 {
+  font-weight: 300;
+}
+.text--500 {
+  font-weight: 500;
+}
+.text--700 {
+  font-weight: 700;
 }
 .text--center {
   text-align: center;
@@ -244,9 +291,26 @@ p {
 .text--grey {
   color: #cccccc;
 }
+.text--grey--hover:hover {
+  color: #cccccc !important;
+}
+.text--black {
+  color: #333;
+}
+.text--black--hover:hover {
+  color: #333;
+}
 .text--normal {
   font-size: 16px;
   line-height: 29px;
+}
+.text--big {
+  font-size: 24px;
+  line-height: 37px;
+}
+.text--great {
+  font-size: 32px;
+  line-height: 32px;
 }
 
 .heading {

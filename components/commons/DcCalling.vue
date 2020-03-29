@@ -84,6 +84,7 @@ export default {
   font-family: "Reey", sans-serif;
   font-size: 16px;
   margin-bottom: 5px;
+  letter-spacing: .8px;
 }
 .calling:hover .calling__figure,
 .calling:hover .calling__name {

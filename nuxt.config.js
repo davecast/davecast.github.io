@@ -23,7 +23,10 @@ export default {
   manifest: {
     lang: locale
   },
-  loading: { color: '#41B883' },
+  loading: { 
+    color: 'blue',
+    height: '3px' 
+  },
   generate: {
     fallback: true,
     interval: 100
