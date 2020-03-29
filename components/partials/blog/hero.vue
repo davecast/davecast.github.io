@@ -3,7 +3,6 @@
       align-content="flex-start"
       class="text--center"
       type="small"
-      img="top__back.jpg"
     >
       <h1
         class="banner__title--big banner__letter__back banner__title--color mb--x3"

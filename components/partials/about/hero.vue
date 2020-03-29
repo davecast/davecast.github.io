@@ -2,7 +2,6 @@
   <dc-banner
       align-content="flex-end"
       class="text--center separator__bottom--35"
-      img="top__back.jpg"
     >
       <div class="grid grid__gap--30 grid__6__6">
         <div class="grid__area--1 grid__v__self--center">
