@@ -12,6 +12,7 @@
   "author": "David Castillo",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "nuxt": "^2.12.1"
   }
 }

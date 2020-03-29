@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page__content">
     <about-hero />
     <home-center-section />
     <home-bottom-section />

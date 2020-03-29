@@ -361,3 +361,15 @@ p {
 .order--3 {
   order: 3;
 }
+
+.page__content {
+  transition: all 0.4s ease-in;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity 0.5s;
+}
+
+.page-enter, .page-leave-active {
+  opacity: 0;
+}

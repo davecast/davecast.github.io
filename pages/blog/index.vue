@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page__content">
     <blog-hero />
   </div>
 </template>
