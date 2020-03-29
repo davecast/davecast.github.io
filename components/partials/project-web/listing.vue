@@ -215,12 +215,14 @@ export default {
   height: 170px;
   overflow: hidden;
   border-radius: 8px;
+  background: #333;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-out;
   margin-bottom: 15px;
 }
 .project__cover--image {
   height: 100%;
+  width: 100%;
   max-width: 100%;
   object-fit: cover;
 }
@@ -301,9 +303,9 @@ export default {
   position: relative;
   top: 0;
   left: -50%;
-  padding: 10px 28px;
+  padding: 7.5px 20px;
   width: max-content;
-  height: 40px;
+  height: 35px;
   line-height: 20px;
   font-size: 12px;
   box-sizing: border-box;

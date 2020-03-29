@@ -110,6 +110,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-image: url("~static/image/top__back.jpg");
+  overflow-x: hidden;
 }
 ul {
   list-style: none;

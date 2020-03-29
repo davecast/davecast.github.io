@@ -60,7 +60,7 @@
         <div class="grid grid__3__3__3__3">
           <div class="grid__area--1 grid__h__self--center ">
             <dc-footer-info
-              title="Lectura díaria de la"
+              title="Cada proyecto se hace con"
               titleIcon="dc-icon-heart"
               address
             >
@@ -70,7 +70,7 @@
           </div>
           <div class="grid__area--2 grid__h__self--center ">
             <dc-footer-info
-              title="Cada proyecto se hace con"
+              title="Lectura díaria de la"
               titleIcon="dc-icon-bible"
               address
             >
