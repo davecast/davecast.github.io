@@ -25,9 +25,7 @@
             />
           </div>
         </transition>
-      </section>
-      <transition name="fade">
-        <div class="listing__more" v-if="!isLoading">
+        <div class="listing__more" v-if="!isLoading && nextPage">
           <dc-button
             border-radius="50px"
             background="0099cc"
@@ -38,7 +36,7 @@
             Cargar más proyectos
           </dc-button>
         </div>
-      </transition>
+      </section>
     </div>
   </section>
 </template>
@@ -67,17 +65,21 @@ export default {
   },
   created() {
     this.setLoading(true);
-    this.getProjectWeb(this.slugName);
+    this.getProjectWeb({ endpoint: this.slugName });
   },
   computed: {
     ...mapState({
       projectList: state => state.webs.list,
-      isLoading: state => state.webs.loadingList
+      isLoading: state => state.webs.loadingList,
+      nextPage: state => state.webs.nextPage
     })
   },
   methods: {
     clickButton() {
-      console.log("click button");
+      this.getProjectWeb({
+        endpoint: this.slugName,
+        page: this.nextPage
+      });
     },
     ...mapActions({
       getProjectWeb: "webs/getProjectWeb"
