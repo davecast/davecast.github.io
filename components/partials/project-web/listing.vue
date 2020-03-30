@@ -19,7 +19,7 @@
         <transition name="fade">
           <div v-if="!isLoading" class="listing__loaded">
             <article
-              v-for="project in projects"
+              v-for="project in projectList"
               :key="project.id"
               class="project"
             >
@@ -88,6 +88,7 @@
 
 <script>
 import axios from "axios";
+import { mapState, mapMutations, mapActions } from "vuex";
 import env from "@/config/env";
 
 export default {
@@ -102,21 +103,23 @@ export default {
       default: ""
     }
   },
-  data() {
-    return {
-      projects: "",
-      isLoading: false
-    };
-  },
   created() {
-    this.isLoading = true;
-
-    axios.get(`${env.endpoint}/${this.slugName}`).then(response => {
-      if (response.status === 200) {
-        this.projects = response.data.data;
-        this.isLoading = false;
-      }
-    });
+    this.setLoading(true);
+    this.getProjectWeb(this.slugName);
+  },
+  computed: {
+    ...mapState({
+      projectList: state => state.webs.list,
+      isLoading: state => state.webs.loadingList
+    })
+  },
+  methods: {
+    ...mapActions({
+      getProjectWeb: "webs/getProjectWeb"
+    }),
+    ...mapMutations({
+      setLoading: 'webs/setLoading'
+    })
   }
 };
 </script>

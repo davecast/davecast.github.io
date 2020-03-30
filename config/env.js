@@ -1,3 +1,3 @@
 export default {
-    endpoint: 'https://api.davecastworks.com'
+    api: 'https://api.davecastworks.com'
 }

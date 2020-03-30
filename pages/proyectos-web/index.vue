@@ -1,7 +1,7 @@
 <template>
   <div class="page__content">
     <web-hero />
-    <web-listing slugName="proyectos-web/" title="Proyectos web" />
+    <web-listing slugName="proyectos-web" title="Proyectos web" />
     <web-call-action />
   </div>
 </template>

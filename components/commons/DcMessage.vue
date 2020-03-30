@@ -5,13 +5,14 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "DcMessage",
-  props: {
-    message: {
-      type: String,
-      default: ""
-    }
+  computed: {
+    ...mapState({
+      message: state => state.message
+    })
   }
 };
 </script>

@@ -5,7 +5,7 @@
       <nuxt />
     </main>
     <dc-footer />
-    <dc-message message="Estamos en construcción aún" />
+    <dc-message />
   </div>
 </template>
 
@@ -13,6 +13,7 @@
 import DcHeader from "@/components/commons/DcHeader.vue";
 import DcFooter from "@/components/commons/DcFooter.vue";
 import DcMessage from "@/components/commons/DcMessage.vue";
+import { mapMutations } from "vuex";
 
 export default {
   components: {
@@ -22,6 +23,12 @@ export default {
   },
   data() {
     return {};
+  },
+  created() {
+    this.setMessage("Estamos en construcción aún");
+  },
+  methods: {
+    ...mapMutations(["setMessage"])
   }
 };
 </script>
