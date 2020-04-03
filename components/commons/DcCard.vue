@@ -85,19 +85,31 @@ export default {
 .card__cover {
   position: relative;
   max-width: 100%;
-  height: 170px;
+  width: 287.5px;
+  height: 190px;
   overflow: hidden;
   border-radius: 8px;
-  background: #333;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-out;
   margin-bottom: 15px;
+}
+.card__cover::before {
+  background-color: #333;
+  position: absolute;
+  content: "";
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  z-index: -1;
+  border-radius: 8px;
 }
 .card__cover--image {
   height: 100%;
   width: 100%;
   max-width: 100%;
   object-fit: cover;
+  z-index: 2;
 }
 .card__foot {
   display: grid;
@@ -155,6 +167,8 @@ export default {
 .category__ux {
   background-color: #003c4c;
 }
+.category__post, 
+.category__marca,
 .category__ui {
   background-color: #0099cc;
 }
@@ -197,6 +211,8 @@ export default {
 .category__tooltip--name.category__ux::before {
   border-top-color: #003c4c;
 }
+.category__tooltip--name.category__marca::before,
+.category__tooltip--name.category__post::before,
 .category__tooltip--name.category__ui::before {
   border-top-color: #0099cc;
 }
