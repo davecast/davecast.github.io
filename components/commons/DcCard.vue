@@ -131,6 +131,9 @@ export default {
 }
 .card__foot--client-avatar img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .card__foot--client-metas h4 {
   font-size: 14px;
