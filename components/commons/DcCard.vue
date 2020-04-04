@@ -8,7 +8,7 @@
         {{ card.name }}
       </h3>
       <span class="card__head--date" v-if="typeCard == 'blog'">publicado </span>
-      <span class="card__head--date">{{ card.date }}</span>
+      <span class="card__head--date" :class="{ card__head__blogdate: typeCard == 'blog' }">{{ card.date }}</span>
     </header>
     <figure class="card__cover">
       <img class="card__cover--image" :src="card.cover" :alt="card.name" />
