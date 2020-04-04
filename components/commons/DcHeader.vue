@@ -27,7 +27,7 @@
             <li class="header__menu--list">
               <nuxt-link
                 v-on:click.native="handleMenu()"
-                to="/proyectos-de-diseño"
+                to="/proyectos-de-diseno"
                 >Proyectos de Diseño</nuxt-link
               >
             </li>

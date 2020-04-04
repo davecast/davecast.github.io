@@ -12,7 +12,7 @@ import webListing from "@/components/partials/project-web/listing"
 import designCallAction from "@/components/partials/project-design/callaction"
 
 export default {
-  name: "ProyectosWeb",
+  name: "ProyectosDeDiseno",
   components: {
     designHero,
     webListing,

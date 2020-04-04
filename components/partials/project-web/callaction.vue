@@ -23,7 +23,7 @@
           text="Proyectos de"
           title="Diseño"
           image="feature__diseno.png"
-          to="/proyectos-de-diseño"
+          to="/proyectos-de-diseno"
         />
         <dc-calling
           class="grid__area--3"

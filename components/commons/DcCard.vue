@@ -1,7 +1,13 @@
 <template>
   <article class="card">
     <header class="card__head">
-      <h3 class="card__head--name">{{ card.name }}</h3>
+      <h3
+        class="card__head--name"
+        :class="{ card__head__blogname: typeCard == 'blog' }"
+      >
+        {{ card.name }}
+      </h3>
+      <span class="card__head--date" v-if="typeCard == 'blog'">publicado </span>
       <span class="card__head--date">{{ card.date }}</span>
     </header>
     <figure class="card__cover">
@@ -9,10 +15,21 @@
     </figure>
     <footer class="card__foot">
       <div class="card__foot--client">
-        <figure class="card__foot--client-avatar">
+        <figure v-if="typeCard == 'blog'" class="card__foot--client-avatar">
+          <img :src="card.author.avatar" :alt="card.author.name" />
+        </figure>
+        <figure v-else-if="typeCard == 'normal'" class="card__foot--client-avatar">
           <img :src="card.client.avatar" :alt="card.client.name" />
         </figure>
-        <div class="card__foot--client-metas">
+        <div v-if="typeCard == 'blog'" class="card__foot--client-metas">
+          <h4>
+            por <strong>{{ card.author.name }}</strong>
+          </h4>
+          <h5 :class="{ blog__job: typeCard == 'blog' }">
+            <span>{{ card.author.job }}</span>
+          </h5>
+        </div>
+        <div v-else-if="typeCard == 'normal'" class="card__foot--client-metas">
           <h4>
             para <strong>{{ card.client.name }}</strong>
           </h4>
@@ -60,6 +77,10 @@ export default {
       default: () => {
         return {};
       }
+    },
+    typeCard: {
+      type: String,
+      default: "normal"
     }
   }
 };
@@ -77,10 +98,19 @@ export default {
   line-height: 16px;
   color: #0099cc;
 }
+.card__head__blogname {
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 40px;
+}
 .card__head--date {
   font-size: 14px;
   line-height: 14px;
   color: #cccccc;
+}
+.card__head__blogdate {
+  font-weight: bold;
+  text-transform: capitalize;
 }
 .card__cover {
   position: relative;
@@ -150,6 +180,9 @@ export default {
   font-weight: 500;
   font-family: "Raleway", sans-serif;
 }
+.card__foot--client-metas h5.blog__job {
+  font-size: 12px;
+}
 .card__foot--categories {
   width: 85px;
   display: grid;
@@ -170,8 +203,15 @@ export default {
 .category__ux {
   background-color: #003c4c;
 }
-.category__post, 
-.category__marca,
+.category__print {
+  background-color: #333333;
+}
+.category__post {
+  background-color: #2cb6db;
+}
+.category__marca {
+  background-color: #2188a3;
+}
 .category__ui {
   background-color: #0099cc;
 }
@@ -214,8 +254,15 @@ export default {
 .category__tooltip--name.category__ux::before {
   border-top-color: #003c4c;
 }
-.category__tooltip--name.category__marca::before,
-.category__tooltip--name.category__post::before,
+.category__tooltip--name.category__print::before {
+  border-top-color: #333333;
+}
+.category__tooltip--name.category__marca::before {
+  border-top-color: #2188a3;
+}
+.category__tooltip--name.category__post::before {
+  border-top-color: #2cb6db;
+}
 .category__tooltip--name.category__ui::before {
   border-top-color: #0099cc;
 }

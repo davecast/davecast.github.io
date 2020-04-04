@@ -1,7 +1,11 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="heading text--blue text--left mb--x3">Lista de {{ title }}</h2>
+      <div class="blog__listing--head">
+        <h2 class="heading text--blue text--left mb--x3">
+          Lista de {{ title }}
+        </h2>
+      </div>
       <p v-if="isLoading" class="text--center text--normal mb--x1">
         Cargando...
       </p>
@@ -16,15 +20,16 @@
             src="~static/image/logo__loading.svg"
           />
         </div>
-        <div class="text--center" v-if="!isLoading && projectList.length == 0">
+        <div class="text--center" v-if="!isLoading && blogList.length == 0">
           No se encontraron {{ title }}
         </div>
         <transition name="fade">
           <div v-if="!isLoading" class="listing__loaded">
             <dc-card
               :card="project"
-              v-for="project in projectList"
+              v-for="project in blogList"
               :key="project.id"
+              type-card="blog"
             />
           </div>
         </transition>
@@ -68,27 +73,27 @@ export default {
   },
   created() {
     this.setLoading(true);
-    this.getProjectWeb({ endpoint: this.slugName });
+    this.getBlogs({ endpoint: this.slugName });
   },
   computed: {
     ...mapState({
-      projectList: state => state.webs.list,
-      isLoading: state => state.webs.loadingList,
-      nextPage: state => state.webs.nextPage
+      blogList: state => state.blogs.list,
+      isLoading: state => state.blogs.loadingList,
+      nextPage: state => state.blogs.nextPage
     })
   },
   methods: {
     clickButton() {
-      this.getProjectWeb({
+      this.getBlogs({
         endpoint: this.slugName,
         page: this.nextPage
       });
     },
     ...mapActions({
-      getProjectWeb: "webs/getProjectWeb"
+      getBlogs: "blogs/getBlogs"
     }),
     ...mapMutations({
-      setLoading: "webs/setLoading"
+      setLoading: "blogs/setLoading"
     })
   }
 };
