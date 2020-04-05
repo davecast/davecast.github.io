@@ -9,7 +9,7 @@
           <p class="text--grey text--normal mb--x2">
             Cada trabajo que realizo para las personas que ponen su confianza en
             mi, los desarrollo con el fin de que se logren las metas por que sus
-            triunfos son mios tambien.
+            triunfos son míos también.
           </p>
           <dc-button
             border-radius="50px"
@@ -21,7 +21,7 @@
           </dc-button>
         </div>
         <div class="grid__area--2">
-          <div class="grid grid__6__6 grid__gap--20  mb--x2">
+          <div class="grid grid__6__6 grid__gap--20 mb--x2">
             <div class="grid__area--1">
               <dc-testimonial
                 avatar-url="/image/testimonios/testimonio__noticierobitcoin.jpg"
@@ -32,7 +32,7 @@
                 :number-star="5"
                 :socials="{
                   instagram: 'https://www.instagram.com/eugeniodelima/',
-                  facebook: 'https://www.facebook.com/eugenio.delimapetralia'
+                  facebook: 'https://www.facebook.com/eugenio.delimapetralia',
                 }"
               >
                 Mi experiencia con David Castillo fue totalmente satisfactoria.
@@ -55,7 +55,7 @@
                 :number-star="5"
                 :socials="{
                   instagram: 'https://www.instagram.com/marlenava7/',
-                  facebook: 'https://www.facebook.com/marlene.nava.714'
+                  facebook: 'https://www.facebook.com/marlene.nava.714',
                 }"
               >
                 Desde nuestra experiencia, consideramos que David Castillo
@@ -81,16 +81,17 @@
                 :number-star="5"
                 :socials="{
                   instagram: 'https://www.instagram.com/jgvincze/',
-                  linkedin: 'https://www.linkedin.com/in/johana-vincze-452242100/',
+                  linkedin:
+                    'https://www.linkedin.com/in/johana-vincze-452242100/',
                 }"
               >
-                Nuestra experiencia con David Castillo ha sido muy satisfactoria, el
-                diseño de nuestra imagen corporativa se adaptó a la solicitud
-                que realizamos y se diseñó bajo el correcto asesoramiento del
-                diseñador. Las propuestas, mejoras, selección de colores y
-                elementos tanto para el logotipo y las diferentes presentaciones
-                del mismo como nuestra imagen corporativa resultó un excelente
-                producto final el cual está acordé a la actualidad.
+                Nuestra experiencia con David Castillo ha sido muy
+                satisfactoria, el diseño de nuestra imagen corporativa se adaptó
+                a la solicitud que realizamos y se diseñó bajo el correcto
+                asesoramiento del diseñador. Las propuestas, mejoras, selección
+                de colores y elementos tanto para el logotipo y las diferentes
+                presentaciones del mismo como nuestra imagen corporativa resultó
+                un excelente producto final el cual está acordé a la actualidad.
               </dc-testimonial>
             </div>
             <div class="grid__area--2">
@@ -103,7 +104,8 @@
                 :number-star="5"
                 :socials="{
                   instagram: 'https://www.instagram.com/sailkauv/',
-                  linkedin: 'https://www.linkedin.com/in/sailka-urdaneta-609a21158/'
+                  linkedin:
+                    'https://www.linkedin.com/in/sailka-urdaneta-609a21158/',
                 }"
               >
                 Altamente profesional en desarrollo web, nada conformista.
@@ -126,8 +128,8 @@ export default {
   name: "bottomSection",
   components: {
     DcButton,
-    DcTestimonial
-  }
+    DcTestimonial,
+  },
 };
 </script>
 

@@ -11,7 +11,7 @@
                 job="Frontend Developer"
                 :socials="{
                   linkedin: 'https://www.linkedin.com/in/albertojpf/',
-                  github: 'https://github.com/albertoperezf'
+                  github: 'https://github.com/albertoperezf',
                 }"
               >
                 Excelente desarrollador Frontend, posee un buen manejo de
@@ -28,7 +28,7 @@
                 job="Backend Developer"
                 :socials="{
                   linkedin: 'https://www.linkedin.com/in/formatcom/',
-                  github: 'https://github.com/formatcom'
+                  github: 'https://github.com/formatcom',
                 }"
               >
                 Excelente desarrollador Frontend, posee un buen manejo de
@@ -45,8 +45,8 @@
             La experiencia de trabajar con expertos
           </h2>
           <p class="text--grey text--normal mb--x2 text--right">
-            Compartir el trabajo con gente especializada, cuya relación ha
-            generado nuestro crecimiento profesional, ha resultado
+            La vivencia de compartir el trabajo con gente especializada, cuya
+            relación ha generado nuestro crecimiento profesional, ha resultado
             enriquecedora. Muchas gracias a quienes nos compartieron su tiempo y
             conocimientos
           </p>
@@ -74,8 +74,8 @@ export default {
   name: "centerSection",
   components: {
     DcButton,
-    DcTestimonial
-  }
+    DcTestimonial,
+  },
 };
 </script>
 

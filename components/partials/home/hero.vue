@@ -1,9 +1,5 @@
 <template>
-  <dc-banner
-    align-content="flex-start"
-    class="text--center"
-    type="small"
-  >
+  <dc-banner align-content="flex-start" class="text--center" type="small">
     <h1
       class="banner__title--big banner__letter__back banner__letter--home banner__title--color mb--x3"
     >
@@ -11,9 +7,9 @@
     </h1>
     <div class="banner__title--text">
       <p class="text--normal mb--x3">
-        Soy un Desarrollador Web y Diseñador Gráfico trabajando como freelancer
-        vivo en Maracaibo, Venezuela. Me gusta mucho la interfaz y experiencia
-        de usuario.
+        Soy un Desarrollador Web y Diseñador Gráfico que trabaja como
+        freelancer, desde Maracaibo, Venezuela. Me gusta mucho la interfaz y la
+        experiencia del usuario.
       </p>
     </div>
     <div>

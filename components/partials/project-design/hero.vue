@@ -1,9 +1,5 @@
 <template>
-  <dc-banner
-    align-content="flex-start"
-    class="text--center"
-    type="small"
-  >
+  <dc-banner align-content="flex-start" class="text--center" type="small">
     <h1
       class="banner__title--big banner__letter__back banner__title--color mb--x3"
     >
@@ -11,8 +7,8 @@
     </h1>
     <div class="banner__title--text">
       <p class="text--normal mb--x3">
-        En este apartado te muestro todo los trabajos relacionados con la
-        creación de impresos, identificadores de marcas y para medios digitales.
+        te muestro todo los trabajos relacionados con la creación de impresos,
+        identificadores de marcas y para medios digitales.
       </p>
     </div>
   </dc-banner>
@@ -23,8 +19,8 @@ import DcBanner from "@/components/commons/DcBanner.vue";
 
 export default {
   components: {
-    DcBanner
-  }
+    DcBanner,
+  },
 };
 </script>
 

@@ -39,11 +39,11 @@
         <div class="grid grid__4__8 grid__gap--30">
           <div class="grid__area--1 grid__v__self--center">
             <h2 class="text--blue heading mb--x1-2">
-              Marcas que confian en nuestro trabajo
+              Marcas que confían en nuestro trabajo
             </h2>
             <p class="text--grey text--normal mb--x2">
               Cuando las personas para las que realizamos un trabajo ponen su
-              confianza en nuestras capacidades, más allá del compromiso formal
+              confianza en nuestras capacidades, más allá del compromiso formal,
               nos empeñamos en desarrollar fórmulas que los lleven a lograr las
               metas fijadas. Porque sus éxitos son también nuestros.
             </p>
