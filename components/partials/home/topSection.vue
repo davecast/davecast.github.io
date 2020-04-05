@@ -34,7 +34,7 @@
         </div>
       </div>
     </section>
-    <section class="section section__no--top">
+    <section class="section section__no--top section__bottom__70">
       <div class="container">
         <div class="grid grid__4__8 grid__gap--30">
           <div class="grid__area--1 grid__v__self--center">
