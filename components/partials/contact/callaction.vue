@@ -1,5 +1,7 @@
 <template>
-  <section class="section section__bottom__100 section__bottom__100 center__top__back">
+  <section
+    class="section section__bottom__70 section__top__70 center__top__back"
+  >
     <div class="container">
       <div>
         <h2 class="text--blue text--center text--great mb--x1">
@@ -50,8 +52,8 @@ import DcCalling from "@/components/commons/DcCalling.vue";
 export default {
   name: "CallAction",
   components: {
-    DcCalling
-  }
+    DcCalling,
+  },
 };
 </script>
 

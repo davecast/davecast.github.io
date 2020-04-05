@@ -150,14 +150,14 @@ p {
 .section__bottom__50 {
   padding-bottom: 50px;
 }
-.section__bottom__100 {
-  padding-bottom: 100px;
+.section__bottom__70 {
+  padding-bottom: 70px;
 }
-.section__bottom__50 {
+.section__top__50 {
   padding-top: 50px;
 }
-.section__bottom__100 {
-  padding-top: 100px;
+.section__top__70 {
+  padding-top: 70px;
 }
 .section__no--top {
   padding-top: 0px;
