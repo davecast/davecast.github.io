@@ -1,5 +1,5 @@
 <template>
-  <section class="section section__bottom__150 center__top__back">
+  <section class="section section__bottom__100 center__top__back">
     <div class="container">
       <div>
         <h2 class="text--blue text--center text--great mb--x1">

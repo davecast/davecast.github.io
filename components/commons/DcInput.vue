@@ -91,10 +91,11 @@ export default {
 }
 .input label {
   position: absolute;
-  top: 12px;
+  top: 14px;
   left: 20px;
   color: #ccc;
   z-index: -1;
+  font-size: 14px;
   transition: all 0.2s ease-in;
   letter-spacing: 1px;
   font-family: "Raleway", sans-serif;
@@ -102,6 +103,7 @@ export default {
 .input label.active {
   top: -30px;
   color: #0099cc;
+  font-size: 16px;
 }
 .input textarea,
 .input input {
@@ -113,8 +115,8 @@ export default {
   border-radius: 40px;
   box-sizing: border-box;
   color: #ccc;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 14px;
   padding: 0 20px;
   cursor: text;
   z-index: 2;

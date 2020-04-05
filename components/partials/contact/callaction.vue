@@ -1,5 +1,5 @@
 <template>
-  <section class="section section__bottom__100 center__top__back">
+  <section class="section section__bottom__100 section__bottom__100 center__top__back">
     <div class="container">
       <div>
         <h2 class="text--blue text--center text--great mb--x1">
@@ -20,24 +20,24 @@
         />
         <dc-calling
           class="grid__area--2"
+          text="Proyectos"
+          title="Web"
+          image="feature__web.png"
+          to="/proyectos-web"
+        />
+        <dc-calling
+          class="grid__area--3"
           text="Proyectos de"
           title="Diseño"
           image="feature__diseno.png"
           to="/proyectos-de-diseno"
         />
         <dc-calling
-          class="grid__area--3"
+          class="grid__area--4"
           text="Redacciones del"
           title="Blog"
           image="feature__blog.png"
           to="/blog"
-        />
-        <dc-calling
-          class="grid__area--4"
-          text="Ponte en"
-          title="Contacto"
-          image="feature__contacto.jpg"
-          to="/contacto"
         />
       </div>
     </div>
