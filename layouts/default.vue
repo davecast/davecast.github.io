@@ -13,7 +13,7 @@
 import DcHeader from "@/components/commons/DcHeader.vue";
 import DcFooter from "@/components/commons/DcFooter.vue";
 import DcMessage from "@/components/commons/DcMessage.vue";
-import { mapMutations } from "vuex";
+import { mapMutations, mapActions } from "vuex";
 
 export default {
   components: {
@@ -25,9 +25,16 @@ export default {
     return {};
   },
   created() {
-    this.setMessage("Estamos en construcción aún");
+    this.initMessage({
+      message: "Estamos en construcción aún",
+      delayIn: 3000,
+      backgroundColor: "red"
+    });
   },
   methods: {
+    ...mapActions({
+      initMessage: "initMessage"
+    }),
     ...mapMutations(["setMessage"])
   }
 };

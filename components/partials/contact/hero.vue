@@ -26,6 +26,6 @@ export default {
 
 <style scoped>
 .banner__letter__back::before {
-  content: "Contacto";
+  content: "Contactame";
 }
 </style>

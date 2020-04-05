@@ -4,7 +4,13 @@
     class="text--center separator__bottom--35"
   >
     <div class="grid grid__gap--30 grid__6__6">
-      <div class="grid__area--1 grid__v__self--center">
+      <div class="grid__area--1">
+        <dc-image-content
+          source="david__transparent.png"
+          altText="David Castillo desarrollador y diseñador"
+        />
+      </div>
+      <div class="grid__area--2 grid__v__self--center">
         <h1
           class="banner__title--big banner__letter__back banner__title--color mb--x3 text--left"
         >
@@ -26,12 +32,6 @@
             la iglesia o comiendo comida deliciosa.
           </p>
         </div>
-      </div>
-      <div class="grid__area--2">
-        <dc-image-content
-          source="david__transparent.png"
-          altText="David Castillo desarrollador y diseñador"
-        />
       </div>
     </div>
   </dc-banner>
