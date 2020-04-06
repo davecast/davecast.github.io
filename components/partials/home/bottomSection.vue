@@ -2,7 +2,7 @@
   <section class="section bottom__back section__top__70 section__bottom__70">
     <div class="container">
       <div class="grid grid__4__8 grid__gap--30">
-        <div class="grid__area--1">
+        <div class="grid__area--1 text--center--tb">
           <h2 class="text--blue heading mb--x1-2">
             Mis clientes hablan por mi
           </h2>

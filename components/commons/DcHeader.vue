@@ -8,50 +8,89 @@
               <img src="~static/image/logo__davecast.png" />
             </figure>
           </nuxt-link>
-          <ul class="header__menu" :class="{ header__open: this.burgerOpen }">
+          <ul
+            class="header__menu"
+            :class="{ header__menu__active: this.burgerOpen }"
+          >
             <li class="header__menu--list">
-              <nuxt-link v-on:click.native="handleMenu()" to="/"
-                >Inicio</nuxt-link
-              >
+              <nuxt-link v-on:click.native="handleMenu()" to="/">
+                <figure class="header__menu__avatar">
+                  <img src="~static/image/menu__home.jpg" />
+                </figure>
+                <span>
+                  Inicio
+                </span>
+              </nuxt-link>
             </li>
             <li class="header__menu--list">
-              <nuxt-link v-on:click.native="handleMenu()" to="/sobre-mi"
-                >Sobre mi</nuxt-link
-              >
+              <nuxt-link v-on:click.native="handleMenu()" to="/sobre-mi">
+                <figure class="header__menu__avatar">
+                  <img src="~static/image/menu__sobremi.jpg" />
+                </figure>
+                <span>
+                  Sobre mi
+                </span>
+              </nuxt-link>
             </li>
             <li class="header__menu--list">
-              <nuxt-link v-on:click.native="handleMenu()" to="/proyectos-web"
-                >Proyectos Web</nuxt-link
-              >
+              <nuxt-link v-on:click.native="handleMenu()" to="/proyectos-web">
+                <figure class="header__menu__avatar">
+                  <img src="~static/image/menu__web.jpg" />
+                </figure>
+                <span>
+                  Proyectos Web
+                </span>
+              </nuxt-link>
             </li>
             <li class="header__menu--list">
               <nuxt-link
                 v-on:click.native="handleMenu()"
                 to="/proyectos-de-diseno"
-                >Proyectos de Diseño</nuxt-link
               >
+                <figure class="header__menu__avatar">
+                  <img src="~static/image/menu__diseno.jpg" />
+                </figure>
+                <span>
+                  Proyectos de Diseño
+                </span>
+              </nuxt-link>
             </li>
             <li class="header__menu--list">
-              <nuxt-link v-on:click.native="handleMenu()" to="/blog"
-                >Blog</nuxt-link
-              >
+              <nuxt-link v-on:click.native="handleMenu()" to="/blog">
+                <figure class="header__menu__avatar">
+                  <img src="~static/image/menu__blog.jpg" />
+                </figure>
+                <span>
+                  Blog
+                </span>
+              </nuxt-link>
             </li>
             <li class="header__menu--list">
-              <nuxt-link v-on:click.native="handleMenu()" to="/contacto"
-                >Contacto</nuxt-link
-              >
+              <nuxt-link v-on:click.native="handleMenu()" to="/contacto">
+                <figure class="header__menu__avatar">
+                  <img src="~static/image/menu__contacto.jpg" />
+                </figure>
+                <span>
+                  Contacto
+                </span>
+              </nuxt-link>
             </li>
           </ul>
-         <dc-social
+          <dc-social
             facebook="https://www.facebook.com/davecast.works"
             instagram="https://www.instagram.com/davecast/"
             linkedin="https://www.linkedin.com/in/davecast/"
             github="https://github.com/davecast"
             platzi="https://platzi.com/@davecast/"
           />
-          <div class="burger" @click="handleMenu">
-            <i v-if="!burgerOpen" class="wz-icon wz-bar"></i>
-            <i v-else class="wz-icon wz-closed"></i>
+          <div class="burger" :class="burgerClass" @click="handleMenu">
+            <!--<i v-if="!burgerOpen" class="dc-icon-bar"></i>
+            <i v-else class="dc-icon-closed"></i>-->
+            <div class="burger__icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
@@ -66,23 +105,28 @@ import DcSocial from "@/components/commons/DcSocial.vue";
 export default {
   name: "DcHeader",
   components: {
-    DcSocial
+    DcSocial,
   },
   data() {
     return {
       burgerOpen: false,
-      windowWidth: (process.browser) ? window.innerWidth : ""
+      windowWidth: process.browser ? window.innerWidth : "",
     };
   },
   methods: {
     handleMenu() {
       this.burgerOpen = !this.burgerOpen;
-    }
+    },
   },
   computed: {
-    classObject: function() {
+    classObject: function () {
       return {};
-    }
+    },
+    burgerClass: function () {
+      return {
+        burger__active: this.burgerOpen,
+      };
+    },
   },
   created() {
     if (process.browser) {
@@ -90,7 +134,7 @@ export default {
         this.windowWidth = window.innerWidth;
       });
     }
-  }
+  },
 };
 </script>
 
@@ -178,11 +222,11 @@ export default {
 .header__menu a {
   color: #cccccc;
   text-transform: capitalize;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 16px;
+  line-height: 16px;
   position: relative;
-  font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
   transition: all 0.3s ease-out;
 }
 .header__transparent .header__menu a {
@@ -213,65 +257,144 @@ export default {
   line-height: 28px;
   color: #2d2d2d;
 }
-@media screen and (max-width: 980px) {
-  .burger {
-    display: flex;
+.header__menu__avatar {
+  display: none;
+  visibility: hidden;
+}
+@media screen and (max-width: 1080px) {
+  .header__content {
+    display: grid;
+    grid-template: 1fr / repeat(12, 1fr);
+    grid-template-areas:
+      "social social social social social social social social social social social social"
+      "logo logo logo logo logo logo burger burger burger burger burger burger";
   }
-  .header__bottom {
-    position: relative;
-  }
-  .header__bottom.header__bottom__fixed {
-    position: fixed;
+  .header__logo {
+    grid-area: logo;
+    justify-self: start;
   }
   .header__menu {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100px;
-    background: #fff;
+    position: fixed;
+    background: #0099cc;
+    top: 0;
+    right: -380px;
+    width: 380px;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
-    height: 0;
-    overflow: hidden;
-    transform: translateY(-10px);
-    padding: 0;
+    align-items: flex-start;
+    justify-content: center;
+    transition: all 0.2s ease-in 0.1s;
+  }
+  .header__menu__active {
+    right: 0;
+    transition-delay: 0s;
+  }
+  .header .social {
+    grid-area: social;
+    justify-self: center;
+    padding: 25px 0 15px;
+  }
+  .burger {
+    grid-area: burger;
+    display: flex;
+    justify-self: end;
+    align-items: center;
+    height: 20px;
+    z-index: 9999;
+  }
+  .burger__icon {
+    max-width: 40px;
+    width: 30px;
+    height: 21px;
+    transform: translateX(2.5px);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .burger__icon:hover span {
+    background-color: #003c4c;
+  }
+  .burger__icon span {
+    width: 30px;
+    outline: none;
+    height: 2px;
+    background-color: #0099cc;
+    display: block;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+  }
+  .burger__icon span:nth-child(1) {
+    margin-bottom: 6px;
+    transform: translateX(-2.5px);
+  }
+  .burger__icon span:nth-child(2) {
+    margin-bottom: 6px;
+    transform: translateX(5px);
+  }
+  .burger__icon span:nth-child(3) {
+    transform: translateX(-5px);
+  }
+  .burger__active .burger__icon span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px) translateX(7px);
+  }
+  .burger__active .burger__icon span:nth-child(2) {
     opacity: 0;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in;
+    transform: translateX(-20px);
   }
-  .header__open {
-    height: auto;
-    overflow: hidden;
-    transform: translateY(0px);
-    padding: 20px;
-    opacity: 1;
+  .burger__active .burger__icon span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-6.5px) translateX(6px);
   }
-  .header__bottom.header__bottom__fixed .header__menu {
-    top: 69px;
+  .burger__active .burger__icon span {
+    background-color: #003c4c;
   }
-  .header__transparent .header__menu a,
-  .header__transparent .header__bottom__fixed .header__menu a {
-    color: #727272;
+  .burger__active .burger__icon:hover span {
+    background-color: #ffffff;
+  }
+  .header__menu--list {
+    margin: 0;
+    width: 100%;
+  }
+  .header__menu--list a {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 35px 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 35px;
+    grid-gap: 0 25px;
+    box-sizing: border-box;
+  }
+  .header__transparent .header__menu a {
+    color: #fff;
   }
   .header__menu a:hover,
   .header__menu a.nuxt-link-exact-active {
-    color: #efdc30;
+    background-color: #008cbb;
+    color: #ffffff;
   }
-  .header__menu--list {
-    margin-left: 0px;
-    padding: 5px 15px;
-    margin-bottom: 10px;
+  .header__menu__avatar {
+    display: block;
+    visibility: visible;
+    width: 45px;
+    height: 45px;
+    font-size: 0;
+    border-radius: 22.5px;
+    overflow: hidden;
+  }
+  .header__menu__avatar img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
   }
 }
 @media screen and (max-width: 768px) {
-  .flags {
-    display: none;
-  }
-  .header__top .header__content {
-    justify-content: flex-end;
-  }
+  
 }
 @media screen and (max-width: 595px) {
-  .header__logo {
-    max-width: 180px;
-  }
+ 
 }
 </style>

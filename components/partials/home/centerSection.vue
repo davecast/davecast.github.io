@@ -41,16 +41,16 @@
           </div>
         </div>
         <div class="grid__area--2 grid__v__self--center">
-          <h2 class="text--blue heading mb--x1-2 text--right">
+          <h2 class="text--blue heading mb--x1-2 text--right text--center--tb">
             La experiencia de trabajar con expertos
           </h2>
-          <p class="text--grey text--normal mb--x2 text--right">
+          <p class="text--grey text--normal mb--x2 text--right text--center--tb">
             La vivencia de compartir el trabajo con gente especializada, cuya
             relación ha generado nuestro crecimiento profesional, ha resultado
             enriquecedora. Muchas gracias a quienes nos compartieron su tiempo y
             conocimientos
           </p>
-          <div class="text--right">
+          <div class="text--right text--center--tb">
             <dc-button
               border-radius="50px"
               background="0099cc"
@@ -79,4 +79,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+@media screen and (max-width: 1024px) {
+  .grid__area--1 {
+    grid-area: area2;
+  }
+  .grid__area--2 {
+    grid-area: area1;
+  }
+}
+</style>

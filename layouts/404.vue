@@ -30,21 +30,21 @@
             class="grid__area--1"
             text="Proyectos"
             title="Web"
-            image="feature__web.png"
+            image="feature__web.jpg"
             to="/proyectos-web"
           />
           <dc-calling
             class="grid__area--2"
             text="Proyectos de"
             title="Diseño"
-            image="feature__diseno.png"
+            image="feature__diseno.jpg"
             to="/proyectos-de-diseno"
           />
           <dc-calling
             class="grid__area--3"
             text="Redacciones del"
             title="Blog"
-            image="feature__blog.png"
+            image="feature__blog.jpg"
             to="/blog"
           />
           <dc-calling

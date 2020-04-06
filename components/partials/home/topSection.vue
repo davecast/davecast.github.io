@@ -2,26 +2,26 @@
   <div class="center__top__back">
     <section class="section">
       <div class="container">
-        <div class="grid grid__3__3__3__3 grid__gap--30">
+        <div class="grid grid__3__3__3__3 grid__3__3__3__3--tb grid__gap--30">
           <dc-calling
             class="grid__area--1"
             text="Proyectos"
             title="Web"
-            image="feature__web.png"
+            image="feature__web.jpg"
             to="/proyectos-web"
           />
           <dc-calling
             class="grid__area--2"
             text="Proyectos de"
             title="Diseño"
-            image="feature__diseno.png"
+            image="feature__diseno.jpg"
             to="/proyectos-de-diseno"
           />
           <dc-calling
             class="grid__area--3"
             text="Redacciones del"
             title="Blog"
-            image="feature__blog.png"
+            image="feature__blog.jpg"
             to="/blog"
           />
           <dc-calling
@@ -37,7 +37,7 @@
     <section class="section section__no--top section__bottom__70">
       <div class="container">
         <div class="grid grid__4__8 grid__gap--30">
-          <div class="grid__area--1 grid__v__self--center">
+          <div class="grid__area--1 grid__v__self--center text--center--tb">
             <h2 class="text--blue heading mb--x1-2">
               Marcas que confían en nuestro trabajo
             </h2>

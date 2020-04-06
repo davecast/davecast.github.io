@@ -17,21 +17,21 @@
           class="grid__area--1"
           text="Conoce todo"
           title="Sobre mi"
-          image="feature__sobremi.png"
+          image="feature__sobremi.jpg"
           to="/sobre-mi"
         />
         <dc-calling
           class="grid__area--2"
           text="Proyectos"
           title="Web"
-          image="feature__web.png"
+          image="feature__web.jpg"
           to="/proyectos-web"
         />
         <dc-calling
           class="grid__area--3"
           text="Proyectos de"
           title="Diseño"
-          image="feature__diseno.png"
+          image="feature__diseno.jpg"
           to="/proyectos-de-diseno"
         />
         <dc-calling
