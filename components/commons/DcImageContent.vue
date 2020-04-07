@@ -41,22 +41,9 @@ figure {
 img {
   max-width: 100%;
 }
-@media screen and (max-width: 768px) {
-  figure {
-    overflow: hidden;
-    height: 300px;
-  }
-  img {
-    object-fit: cover;
-    object-position: center;
-    height: 300px;
-    width: 100%;
-  }
-  .brands figure {
-    height: auto;
-  }
-  .brands figure img {
-    height: auto;
+@media screen and (max-width: 680px) {
+  .image__80--percent {
+    max-width: 250px;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section class="section bottom__back section__top__70 section__bottom__70">
     <div class="container">
-      <div class="grid grid__4__8 grid__gap--30">
+      <div class="grid grid__4__8 grid__gap--30 grid__gap--40--sm">
         <div class="grid__area--1 text--center--tb">
           <h2 class="text--blue heading mb--x1-2">
             Mis clientes hablan por mi
@@ -21,7 +21,7 @@
           </dc-button>
         </div>
         <div class="grid__area--2">
-          <div class="grid grid__6__6 grid__gap--20 mb--x2">
+          <div class="grid grid__6__6 grid__6__6--sm grid__gap--20 mb--x2 grid__gap--40--sm mb--x4--sm">
             <div class="grid__area--1">
               <dc-testimonial
                 avatar-url="/image/testimonios/testimonio__noticierobitcoin.jpg"
@@ -70,7 +70,7 @@
               </dc-testimonial>
             </div>
           </div>
-          <div class="grid grid__6__6 grid__gap--20">
+          <div class="grid grid__6__6 grid__6__6--sm grid__gap--20 grid__gap--40--sm">
             <div class="grid__area--1">
               <dc-testimonial
                 avatar-url="/image/testimonios/testimonio__jotas.jpg"

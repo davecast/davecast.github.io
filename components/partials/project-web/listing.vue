@@ -1,7 +1,7 @@
 <template>
-  <section class="section">
+  <section class="section overflow__x__hidden--sm">
     <div class="container">
-      <h2 class="heading text--blue text--left mb--x3">Lista de {{ title }}</h2>
+      <h2 class="heading text--blue text--left mb--x3 text--center--tb">Lista de {{ title }}</h2>
       <p v-if="isLoading" class="text--center text--normal mb--x1">
         Cargando...
       </p>
@@ -167,6 +167,28 @@ export default {
 
   100% {
     transform: scale(0.95);
+  }
+}
+@media screen and (max-width: 1270px) {
+  .container {
+    max-width: 90%;
+  }
+  .listing__loaded {
+    grid-template: 1fr / repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 980px) {
+  .listing__loaded {
+    grid-template: 1fr / repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 680px) {
+  .listing__loaded {
+    grid-template: 1fr / 1fr;
+    grid-gap: 40px 0px;
+  }
+  .container {
+    max-width: 85%;
   }
 }
 </style>

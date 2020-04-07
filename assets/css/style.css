@@ -399,6 +399,10 @@ p {
   opacity: 0;
 }
 @media screen and (max-width: 1270px) {
+  .bottom__back::before,
+  .bottom__back::after,
+  .center__bottom__back,
+  .center__top__back,
   body {
     background-size: auto 360px;
   }
@@ -408,6 +412,20 @@ p {
   }
 }
 @media screen and (max-width: 1024px) {
+  .bottom__back::before,
+  .bottom__back::after,
+  .center__bottom__back,
+  .center__top__back,
+  body {
+    background-size: auto 300px;
+  }
+
+  .display__none--tb {
+    display: none;
+  }
+  .grid__12--tb {
+    grid-template-areas: "area1 area1 area1 area1 area1 area1 area1 area1 area1 area1 area1 area1";
+  }
   .grid__4__8 {
     grid-template-areas:
       "area1 area1 area1 area1 area1 area1 area1 area1 area1 area1 area1 area1"
@@ -450,5 +468,70 @@ p {
 
   .text--center--tb {
     text-align: center;
+  }
+}
+@media screen and (max-width: 680px) {
+  .bottom__back::before,
+  .bottom__back::after,
+  .center__bottom__back,
+  .center__top__back,
+  body {
+    background-size: auto 250px;
+  }
+  .container {
+    max-width: 85%;
+  }
+
+  .grid__3__3__3__3--sm {
+    grid-template-areas:
+      "area1 area1 area1 area1 area1 area1 area1 area1 area1 area1 area1 area1"
+      "area2 area2 area2 area2 area2 area2 area2 area2 area2 area2 area2 area2"
+      "area3 area3 area3 area3 area3 area3 area3 area3 area3 area3 area3 area3"
+      "area4 area4 area4 area4 area4 area4 area4 area4 area4 area4 area4 area4";
+  }
+  .grid__6__6--sm {
+    grid-template-areas:
+      "area1 area1 area1 area1 area1 area1 area1 area1 area1 area1 area1 area1"
+      "area2 area2 area2 area2 area2 area2 area2 area2 area2 area2 area2 area2";
+  }
+
+  .grid__gap--40--sm {
+    grid-gap: 40px 0;
+  }
+
+  .grid__area--1--sm {
+    grid-area: area1;
+  }
+  .grid__area--2--sm {
+    grid-area: area2;
+  }
+  .grid__area--3--sm {
+    grid-area: area3;
+  }
+  .grid__area--4--sm {
+    grid-area: area4;
+  }
+  .grid__area--5--sm {
+    grid-area: area5;
+  }
+  .grid__area--6--sm {
+    grid-area: area6;
+  }
+
+  .mb--x4--sm {
+    margin-bottom: 40px;
+  }
+
+  .overflow__x__hidden--sm {
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 380px) {
+  .bottom__back::before,
+  .bottom__back::after,
+  .center__bottom__back,
+  .center__top__back,
+  body {
+    background-size: auto 150px;
   }
 }

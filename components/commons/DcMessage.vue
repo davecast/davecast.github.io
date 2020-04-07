@@ -52,6 +52,7 @@ export default {
   position: fixed;
   bottom: 60px;
   right: 60px;
+  z-index: 9999;
 }
 
 .DcMessage {

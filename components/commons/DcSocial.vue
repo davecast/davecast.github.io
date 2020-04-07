@@ -91,13 +91,17 @@ a {
 a:hover {
   color: #0099cc;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
+  header .social a {
+    font-size: 28px;
+    line-height: 28px;
+  }
   footer .social li:last-child {
     margin: 0 !important;
   }
   footer .social a {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 24px;
+    line-height: 24px;
   }
 }
 </style>

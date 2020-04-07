@@ -1,9 +1,9 @@
 <template>
   <section class="section back--grey section__bottom__70 section__top__70">
     <div class="container">
-      <div class="grid grid__8__4 grid__gap--30">
+      <div class="grid grid__8__4 grid__gap--30 grid__gap--40--sm">
         <div class="grid__area--1 grid__v__self--center">
-          <div class="grid grid__6__6 grid__gap--20">
+          <div class="grid grid__6__6 grid__6__6--sm grid__gap--20 grid__gap--40--sm">
             <div class="grid__area--1 grid__v__self--center">
               <dc-testimonial
                 avatar-url="/image/testimonios/testimonio__alberto.jpg"

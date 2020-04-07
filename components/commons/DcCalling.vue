@@ -96,4 +96,11 @@ export default {
 .calling:hover .calling__figure::before {
   background-color: rgba(44, 182, 219, 0.75);
 }
+
+
+@media screen and (max-width: 680px) {
+  .calling__figure {
+    height: 152px;
+  }
+}
 </style>

@@ -239,56 +239,48 @@ export default {
 .container__slider {
   z-index: 1;
 }
-@media screen and (max-width: 980px) {
-  .banner {
-    height: 595px;
-  }
-  .banner__title--big {
-    font-size: 32px;
-    line-height: 42px;
-  }
+@media screen and (max-width: 1024px) {
+  .banner,
   .banner--small {
-    max-height: 400px;
-    margin-top: 0px;
+    max-height: none;
+    padding-top: 200px;
+    height: auto;
   }
-  .banner__title--text {
-    width: 390px;
+  .banner__letter__back::before {
+    font-size: 58px;
+    line-height: 58px;
   }
-  .banner__title--separator {
-    padding-bottom: 25px;
-  }
-  .banner__title--separator.mb--x3 {
-    margin-bottom: 25px;
+  .banner__title--center--tb {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-
-@media screen and (max-width: 595px) {
-  .banner {
-    height: calc(100vh - 135px);
-  }
-  .banner__content {
-    text-align: center;
+@media screen and (max-width: 680px) {
+  .banner__letter__back::before {
+    font-size: 48px;
+    line-height: 90px;
   }
   .banner__title--big {
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 38px;
+    line-height: 38px;
   }
-  .banner__title--medium {
-    font-size: 22px;
-    line-height: 22px;
-    text-align: center;
+  .banner--small {
+    padding-top: 250px;
   }
-  .banner__title--text {
-    max-width: 280px;
-    font-size: 14px;
-    line-height: 22px;
-    text-align: center;
-    margin: 0 auto;
+}
+@media screen and (max-width: 595px) {
+  .banner__letter__back::before {
+    font-size: 32px;
+    line-height: 100px;
   }
-  .banner__title--separator::before {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+}
+@media screen and (max-width: 340px) {
+  .banner__title--big {
+    font-size: 34px;
+    line-height: 34px;
+  }
+  .banner--small {
+    padding-top: 200px;
   }
 }
 </style>

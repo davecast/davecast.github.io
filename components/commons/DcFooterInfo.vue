@@ -102,4 +102,19 @@ export default {
 .footer__top--footer a:hover {
   color: #333;
 }
+@media screen and (max-width: 1024px) {
+  .footer__top--head {
+    text-align: center;
+    grid-template: 1fr / repeat(2, auto);
+    align-items: center;
+    justify-content: center;
+  }
+  .footer__top--footer {
+    padding: 0;
+    text-align: center;
+  }
+  .footer__top--head {
+    margin-bottom: 10px;
+  }
+}
 </style>

@@ -2,7 +2,7 @@
   <div class="center__top__back">
     <section class="section">
       <div class="container">
-        <div class="grid grid__3__3__3__3 grid__3__3__3__3--tb grid__gap--30">
+        <div class="grid grid__3__3__3__3 grid__3__3__3__3--tb grid__3__3__3__3--sm grid__gap--30 grid__gap--40--sm">
           <dc-calling
             class="grid__area--1"
             text="Proyectos"
@@ -36,7 +36,7 @@
     </section>
     <section class="section section__no--top section__bottom__70">
       <div class="container">
-        <div class="grid grid__4__8 grid__gap--30">
+        <div class="grid grid__4__8 grid__gap--30 grid__gap--40--sm">
           <div class="grid__area--1 grid__v__self--center text--center--tb">
             <h2 class="text--blue heading mb--x1-2">
               Marcas que confían en nuestro trabajo
@@ -88,7 +88,7 @@
                   <img src="~static/image/marcas/gunthe-casa.svg" />
                 </figure>
               </li>
-              <li class="brands__list">
+              <li class="brands__list brand--hiddem ">
                 <figure>
                   <img src="~static/image/marcas/marlene-writing.svg" />
                 </figure>
@@ -130,5 +130,17 @@ export default {
   max-width: 100%;
   object-fit: contain;
   max-height: 100px;
+}
+@media screen and (max-width: 680px) {
+  .brands {
+    grid-template: 1fr / repeat(2, 1fr);
+    grid-gap: 35px 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  .brand--hiddem {
+    display: none;
+    visibility: hidden;
+  }
 }
 </style>

@@ -31,7 +31,7 @@
         </div>
         <div v-else-if="typeCard == 'normal'" class="card__foot--client-metas">
           <h4>
-            para <strong>{{ card.client.name }}</strong>
+            <span>para</span> <strong>{{ card.client.name }}</strong>
           </h4>
           <h5>
             de <span>{{ card.client.location }}</span>
@@ -272,5 +272,30 @@ export default {
 .category:hover > .category__tooltip {
   opacity: 1;
   visibility: visible;
+}
+@media screen and (max-width: 1270px) {
+  .card__cover {
+    width: 100%;
+    height: 0px;
+    padding-top: 67%;
+    position: relative;
+  }
+  .card__cover--image {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+}
+@media screen and (max-width: 1120px) {
+  
+}
+@media screen and (max-width: 980px) {
+ 
+}
+@media screen and (max-width: 680px) {
+  .category__tooltip--name {
+    padding: 5px 15px;
+    line-height: 26px;
+  }
 }
 </style>

@@ -65,4 +65,9 @@ export default {
 .media img:hover {
   transform: scale(1.03);
 }
+@media screen and (max-width: 680px) {
+  .media {
+    grid-template: 40px / repeat(3, 40px);
+  }
+}
 </style>

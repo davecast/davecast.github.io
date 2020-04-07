@@ -2,7 +2,7 @@
   <footer>
     <div class="footer__top back--blue">
       <div class="container">
-        <div class="grid grid__3__3__3__3 grid__3__3__3__3--tb grid__gap--30--tb">
+        <div class="grid grid__3__3__3__3 grid__3__3__3__3--tb grid__3__3__3__3--sm grid__gap--30--tb grid__gap--40--sm">
           <div
             class="grid__area--1 grid__h__self--center grid__v__self--center"
           >
@@ -13,7 +13,7 @@
             />
           </div>
           <div
-            class="grid__area--2 grid__area--3--tb grid__h__self--center grid__v__self--center"
+            class="grid__area--2 grid__area--3--tb grid__area--2--sm grid__h__self--center grid__v__self--center"
           >
             <dc-footer-info
               icon="dc-icon-point"
@@ -26,7 +26,7 @@
             </dc-footer-info>
           </div>
           <div
-            class="grid__area--3 grid__area--4--tb grid__h__self--center grid__v__self--center"
+            class="grid__area--3 grid__area--4--tb grid__area--3--sm grid__h__self--center grid__v__self--center"
           >
             <dc-footer-info
               class="mb--x1"
@@ -41,7 +41,7 @@
             />
           </div>
           <div
-            class="grid__area--4 grid__area--2--tb text--center text--white grid__h__self--center grid__v__self--center"
+            class="grid__area--4 grid__area--2--tb grid__area--4--sm text--center text--white grid__h__self--center grid__v__self--center"
           >
             <h3 class="text--reey text--normal text--500">Llama</h3>
             <h2>
@@ -57,9 +57,8 @@
     </div>
     <div class="footer__bottom back--greenblue">
       <div class="container">
-        <div class="grid grid__3__3__3__3 grid__3__3__3__3--tb grid__gap--30--tb {
-">
-          <div class="grid__area--1 grid__area--3--tb grid__h__self--center ">
+        <div class="grid grid__3__3__3__3 grid__3__3__3__3--tb grid__3__3__3__3--sm grid__gap--30--tb grid__gap--40--sm">
+          <div class="grid__area--1 grid__area--3--tb grid__area--4--sm grid__h__self--center ">
             <dc-footer-info
               title="Cada proyecto se hace con"
               titleIcon="dc-icon-heart"
@@ -96,7 +95,7 @@
             </dc-footer-info>
           </div>
           <div
-            class="grid__area--4 grid__h__self--center grid__v__self--center"
+            class="grid__area--4 grid__area--3--sm grid__h__self--center grid__v__self--center"
           >
             <dc-social
               class="footer__social"
@@ -145,4 +144,11 @@ export default {
     display: none;
   }
 }
+@media screen and (max-width: 1024px) {
+  .footer__bottom, 
+  .footer__top {
+    padding: 35px 0px;
+  }
+}
+
 </style>
