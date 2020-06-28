@@ -1,18 +1,20 @@
 <template>
   <article class="card">
     <header class="card__head">
-      <h3
-        class="card__head--name"
-        :class="{ card__head__blogname: typeCard == 'blog' }"
-      >
-        {{ card.name }}
-      </h3>
+        <h3
+          class="card__head--name"
+          :class="{ card__head__blogname: typeCard == 'blog' }"
+        >
+          <nuxt-link :to="`/proyectos-web/${card.postName}`">{{ card.name }}</nuxt-link>
+        </h3>  
       <span class="card__head--date" v-if="typeCard == 'blog'">publicado </span>
       <span class="card__head--date" :class="{ card__head__blogdate: typeCard == 'blog' }">{{ card.date }}</span>
     </header>
-    <figure class="card__cover">
-      <img class="card__cover--image" :src="card.cover" :alt="card.name" />
-    </figure>
+    <nuxt-link :to="`/proyectos-web/${card.postName}`">
+      <figure class="card__cover">
+        <img class="card__cover--image" :src="card.cover" :alt="card.name" />
+      </figure>
+    </nuxt-link>
     <footer class="card__foot">
       <div class="card__foot--client">
         <figure v-if="typeCard == 'blog'" class="card__foot--client-avatar">
@@ -93,16 +95,21 @@ export default {
 .card__head {
   margin-bottom: 10px;
 }
-.card__head--name {
+.card__head--name a {
   font-size: 16px;
   line-height: 16px;
   color: #0099cc;
 }
-.card__head__blogname {
+.card__head__blogname a {
   font-size: 16px;
   line-height: 20px;
   min-height: 40px;
 }
+.card__head__blogname a:hover,
+.card__head--name a:hover {
+  color: #003c4c;
+}
+
 .card__head--date {
   font-size: 14px;
   line-height: 14px;
@@ -134,12 +141,30 @@ export default {
   z-index: -1;
   border-radius: 8px;
 }
+.card__cover::after {
+  background-color: transparent;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  transition: all 0.2s ease-in;
+}
 .card__cover--image {
   height: 100%;
   width: 100%;
   max-width: 100%;
   object-fit: cover;
   z-index: 2;
+  transition: all 0.2s ease-in;
+}
+.card__cover:hover .card__cover--image {
+  transform: scale(1.03);
+}
+.card__cover:hover::after {
+  background-color: rgba(255, 255, 255, 0.75);
 }
 .card__foot {
   display: grid;
@@ -199,24 +224,6 @@ export default {
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-}
-.category__ux {
-  background-color: #003c4c;
-}
-.category__print {
-  background-color: #333333;
-}
-.category__post {
-  background-color: #2cb6db;
-}
-.category__marca {
-  background-color: #2188a3;
-}
-.category__ui {
-  background-color: #0099cc;
-}
-.category__develop {
-  background-color: #cccccc;
 }
 .category__tooltip {
   position: absolute;

@@ -220,20 +220,20 @@ export default {
   margin: 0;
 }
 .header__menu a {
-  color: #cccccc;
+  color: #333333;
   text-transform: capitalize;
   font-size: 16px;
   line-height: 16px;
   position: relative;
-  font-weight: 500;
+  font-weight: 700;
   font-family: "Raleway", sans-serif;
   transition: all 0.3s ease-out;
 }
 .header__transparent .header__menu a {
-  color: #cccccc;
+  color: #333;
 }
 .header__transparent .header__bottom__fixed .header__menu a {
-  color: #cccccc;
+  color: #333;
 }
 .header__menu a:hover,
 .header__menu a.nuxt-link-exact-active {

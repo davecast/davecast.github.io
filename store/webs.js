@@ -4,9 +4,13 @@ import env from "@/config/env";
 export const state = () => ({
   list: [],
   loadingList: false,
-  nextPage: ""
+  nextPage: "",
+  project: undefined
 });
 export const mutations = {
+  setProject(state, project) {
+    state.project = project;
+  },
   setList(state, list) {
     state.list = list.data;
     state.nextPage = list.next_page;
@@ -45,5 +49,16 @@ export const actions = {
     } else {
       commit("updateList", projectsWeb);
     }
+  },
+  async getProject({ commit }, { project }) {
+    let url = `${env.api}/proyectos_web/${project}/`;
+
+    const data = await axios.get(url).then(response => {
+      console.log(response.data);
+      return response.data;
+    })
+    
+    const projectDetail = await data;
+    commit("setProject", projectDetail);
   }
 };

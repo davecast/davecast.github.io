@@ -1,6 +1,11 @@
 <template>
   <figure>
-    <img :src="`/image/${this.source}`" :alt="this.altText" />
+    <template v-if="!this.sourceExternal">
+      <img :src="`/image/${this.source}`" :alt="this.altText" />
+    </template>
+    <template v-else>
+      <img :src="`${this.sourceExternal}`" :alt="this.altText" />
+    </template>
   </figure>
 </template>
 
@@ -9,6 +14,9 @@ export default {
   name: "ImageContent",
   props: {
     source: {
+      type: String
+    },
+    sourceExternal: {
       type: String
     },
     altText: {

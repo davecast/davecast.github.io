@@ -7,7 +7,7 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
+    link: [{ rel:"icon", type: "image/x-icon", href: "/favicon.png" }],
     bodyAttrs: {
       class: [""],
     },
@@ -23,7 +23,7 @@ export default {
     lang: locale,
   },
   loading: {
-    color: "blue",
+    color: "#0099cc",
     height: "3px",
   },
   generate: {

@@ -10,7 +10,9 @@
           Te invito a conocerme mas
         </p>
       </div>
-      <div class="grid grid__3__3__3__3 grid__3__3__3__3--tb grid__3__3__3__3--sm grid__gap--30 grid__gap--40--sm">
+      <div
+        class="grid grid__3__3__3__3 grid__3__3__3__3--tb grid__3__3__3__3--sm grid__gap--30 grid__gap--40--sm"
+      >
         <dc-calling
           class="grid__area--1"
           text="Conoce todo"
@@ -50,8 +52,8 @@ import DcCalling from "@/components/commons/DcCalling.vue";
 export default {
   name: "CallAction",
   components: {
-    DcCalling
-  }
+    DcCalling,
+  },
 };
 </script>
 

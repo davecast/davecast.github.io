@@ -1,7 +1,7 @@
 <template>
   <section
     class="banner"
-    :class="type === 'small' ? 'banner--small' : 'banner--big'"
+    :class="`banner--${type}`"
     :style="styleObject"
   >
     <section v-if="this.imageArray.length > 0" class="banner__slider">
@@ -63,7 +63,7 @@ export default {
   data() {
     return {
       sliderInterval: "",
-      imageUrl: this.img ? `/image/${this.img}` : ""
+      imageUrl: this.img ? `/image/${this.img}` : "",
     };
   },
   methods: {
@@ -103,7 +103,7 @@ export default {
     styleObject: function() {
       return {
         alignItems: this.alignContent,
-        backgroundImage: `url(${this.imageUrl})`
+        backgroundImage: (this.imageUrl == "") ? "url(https://api.davecastworks.com/wp-content/uploads/2020/03/featuredImage-detail.jpg)" : ""
       };
     }
   },
@@ -117,7 +117,7 @@ export default {
 .banner {
   height: calc(100vh);
   max-height: 650px;
-  background-size: auto 550px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
@@ -129,6 +129,11 @@ export default {
   max-height: 500px;
   padding-top: 250px;
   box-sizing: border-box;
+}
+.banner--webdetail {
+  padding: 200px 0 100px;
+  background-size: 1920px auto;
+  height: auto;
 }
 .banner__content {
   margin-top: 45px;
@@ -238,6 +243,45 @@ export default {
 }
 .container__slider {
   z-index: 1;
+}
+
+.tags {
+  display: flex;
+  margin-bottom: 30px;
+}
+.tag {
+  color: #fff;
+  padding: 14px 26px;
+  font-size: 12px;
+  line-height: 12px;
+  border-radius: 25px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tag i {
+  font-size: 14px;
+  line-height: 14px;
+  margin-right: 5px;
+}
+.tag:last-child {
+  margin-right: 0;
+}
+.metas {
+  display: flex;
+  color: #ccc;
+}
+.meta {
+ margin-right: 20px;
+}
+.meta strong,
+.meta a{
+  margin-left: 5px;
+  color: #0099cc;
+}
+.meta a:hover {
+  color: #333333;
 }
 @media screen and (max-width: 1024px) {
   .banner,
