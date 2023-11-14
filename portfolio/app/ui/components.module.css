@@ -1,0 +1,62 @@
+.h2 {
+  font-size: var(--font-size-big);
+  font-family: var(--font-relaway);
+}
+.h4 {
+  font-size: var(--font-size-sub);
+  font-family: var(--font-relaway);
+}
+.paragraph {
+  font-size: var(--font-size-normal);
+}
+.paragraphSmall {
+  font-size: var(--font-size-small);
+}
+.lineHeightParagraph {
+  line-height: 27px;
+}
+.bold {
+  font-weight: bold;
+}
+.link {
+  transition: all 0.25s ease-in;
+}
+.link:hover {
+  color: var(--color-primary-hover);
+}
+.link:active {
+  color: var(--color-primary-push);
+}
+.primary {
+  color: var(--color-primary);
+}
+.black {
+  color: var(--color-black);
+}
+.grayDark {
+  color: var(--color-gray-dark);
+}
+.mBottom1 {
+  margin: 0 0 1rem;
+}
+.mBottom15 {
+  margin: 0 0 1.5rem;
+}
+.mBottom2 {
+  margin: 0 0 2rem;
+}
+.button {
+  display: inline-block;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+  font-size: var(--font-size-small);
+  color: var(--color-white);
+  padding: 1rem 1.25rem;
+  transition: all 0.25s ease-in;
+}
+.button:hover {
+  background-color: var(--color-primary-hover);
+}
+.button:active {
+  background-color: var(--color-primary-push);
+}
