@@ -1,0 +1,118 @@
+.header {
+  border-bottom: 1px solid var(--color-gray);
+}
+.wrapper {
+  height: 3.5rem;
+  border-left: 1px solid var(--color-gray);
+  border-right: 1px solid var(--color-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem 0 1rem;
+}
+.logo {
+}
+.logo h1 {
+  display: none;
+}
+.logo img {
+  max-width: 240px;
+}
+.headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.themeSelector {
+}
+.separator {
+}
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+.social {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  background-color: var(--color-primary);
+  transition: all 0.25s ease-in;
+}
+.social:hover {
+  background-color: var(--color-primary-hover);
+}
+.social:active {
+  background-color: var(--color-primary-push);
+}
+.social img {
+  width: 14px;
+  height: 14px;
+}
+.headerMenu {
+  display: none;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+.headerMenu img {
+  transition: all 0.25s ease-in;
+}
+.headerMenu:hover {
+  background-color: var(--color-gray-ligth);
+  border: 1px solid var(--color-gray-ligth);
+}
+.headerMenu:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .headerMenu {
+    display: flex;
+    z-index: 99;
+  }
+  .headerMenuActive {
+    background-color: var(--color-gray-ligth);
+    border: 1px solid var(--color-gray-ligth);
+  }
+  .headerMenuActive:hover {
+    background-color: var(--color-gray-ligth);
+    border: 1px solid var(--color-gray-ligth);
+  }
+  .headerRight {
+    position: absolute;
+    right: 1rem;
+    top: 56px;
+    height: 0;
+    overflow: hidden;
+    z-index: 99;
+  }
+  .headerRightActive {
+    height: auto;
+    overflow: hidden;
+  }
+  .overlayHeaderMobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    opacity: 0.15;
+    z-index: 1;
+  }
+  .socials {
+    flex-direction: column;
+  }
+  .wrapper {
+    position: relative;
+    padding: 0 1rem 0 0;
+  }
+}
