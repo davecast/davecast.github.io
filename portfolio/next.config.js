@@ -4,10 +4,10 @@ const nextConfig = {
   trailingSlash: true,
   images: { unoptimized: true },
   basePath: "",
-  env: {
-    instagramToken:
-      "IGQWROaEdHMkdCZA09xQW1EbEVyT2hrdzE0T0F0X0pIcUM0R3ZAaMHpDbVR2bW5fVkZAieUVKQlRfRVFLMFoxWi1YejAxemlveFBDb1pGYU1UN2dPVFRiRTFlMzJkVTB6Y0NQRlJHQ3ZAweGlzaXlFM1piWTExTk9STmcZD",
-  },
+  // env: {
+  //   instagramToken:
+  //     "",
+  // },
 };
 
 module.exports = nextConfig;
