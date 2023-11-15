@@ -80,16 +80,14 @@ const MAP_PROJECTS: Array<{
   },
   {
     name: "María Naranjo",
-    description:
-      "Desarrollo de sitio web informativo sobre los servicios de la empresa.",
+    description: "Desarrollo de página web de marca profesional.",
     image: bgProjectThree,
     link: "https://mjninsurance.com/",
     opacity: 0.9,
   },
   {
     name: "Deisocial",
-    description:
-      "Desarrollo y diseño de one page de marca profesional, y ofrecer servicios.",
+    description: "Desarrollo y diseño de página web de marca profesional.",
     image: bgProjectFour,
     link: "https://davecast.github.io/deisocial/",
     opacity: 0.9,
@@ -97,7 +95,7 @@ const MAP_PROJECTS: Array<{
   {
     name: "Bioverdi Natura",
     description:
-      "Desarrollo y diseño de one page de marca profesional, y ofrecer servicios.",
+      "Desarrollo y diseño de página web informativa sobre los servicios de la empresa.",
     image: bgProjectFive,
     link: "https://davecast.github.io/bioverdi/",
     opacity: 0.9,
@@ -105,7 +103,7 @@ const MAP_PROJECTS: Array<{
   {
     name: "Neuss",
     description:
-      "Desarrollo y diseño de sitio web informativo sobre los servicios de la empresa.",
+      "Desarrollo y diseño de página web informativa sobre los servicios de la empresa.",
     image: bgProjectSix,
     link: "https://neuss-ts.com/",
     opacity: 0.85,
@@ -151,8 +149,8 @@ export default function Home() {
                   >
                     David Castillo
                   </span>{" "}
-                  un Desarrollador web y Diseñador Gráfico de Venezuela
-                  construyendo todo tipo de ideas interesantes. Tengo una pasión
+                  un Desarrollador web y Diseñador Gráfico de Venezuela, que
+                  construye todo tipo de ideas interesantes. Tengo una pasión
                   por crear experiencias web atractivas e intuitivas que
                   satisfagan las necesidades de los usuarios.
                 </p>
@@ -184,7 +182,7 @@ export default function Home() {
                   target="_blank"
                   className={stylesComponents.button}
                 >
-                  Aprende mas sobre mí
+                  Aprende más sobre mí
                 </a>
               </div>
               <div
@@ -266,7 +264,7 @@ export default function Home() {
                   stylesComponents.mBottom15,
                 ])}
               >
-                ULTIMOS PROYECTOS
+                ÚLTIMOS PROYECTOS
               </h4>
               <div className={styles.projects}>
                 {MAP_PROJECTS.map((item, index) => (
