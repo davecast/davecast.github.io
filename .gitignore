@@ -1,22 +1,36 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # dependencies
-node_modules
-package-lock.json
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
 
-# logs
-npm-debug.log
-yarn-error.log
+# testing
+/coverage
 
-# other
-.nuxt
-dist
-.vscode
-.idea
-newrelic_agent.log
-.DS_STORE
-.eslintrc
+# next.js
+/.next/
+/out/
 
-# docs
-/docs
+# production
+/build
 
-# @nuxtjs/pwa
-sw.*
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
