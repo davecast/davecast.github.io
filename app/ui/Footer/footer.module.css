@@ -28,7 +28,7 @@
 }
 .copy {
   font-size: var(--font-size-small);
-  color: var(--color-gray);
+  color: var(--color-gray-b);
 }
 .footerBottom {
   height: 3.5rem;
