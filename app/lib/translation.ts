@@ -22,13 +22,15 @@ const LANG_LIST: LangList = {
       projectTitle: "LATEST PROJECTS",
       projectOne: "Web site and web application development using reactjs.",
       projectTwo: "E-commerce development and design for a pet products store.",
-      projectThree: "Professional branded website development.",
+      projectThree:
+        "Professional branded website development to María Naranjo.",
       projectFour: "Professional branded website design and development.",
       projectFive:
         "Development and design of an informative web page about the company's services.",
       projectSix:
         "Development and design of an informative web page about the company's services.",
       seeProject: "Go to project",
+      feedInstagramTitle: "LATEST POST",
     },
     Footer: {
       text: "Hey if you have any project idea that you want to develop, feel free to write me,",
@@ -62,13 +64,15 @@ const LANG_LIST: LangList = {
         "Desarrollo de sitio web y aplicaciones web utilizando reactjs.",
       projectTwo:
         "Desarrollo y diseño de e-commerce para una tienda de productos para mascotas.",
-      projectThree: "Desarrollo de página web de marca profesional.",
+      projectThree:
+        "Desarrollo de página web de marca profesional de María Naranjo.",
       projectFour: "Desarrollo y diseño de página web de marca profesional.",
       projectFive:
         "Desarrollo y diseño de página web informativa sobre los servicios de la empresa.",
       projectSix:
         "Desarrollo y diseño de página web informativa sobre los servicios de la empresa.",
       seeProject: "Ir a projecto",
+      feedInstagramTitle: "ULTIMOS POST",
     },
     Footer: {
       text: "Hey si tienes alguna idea de proyecto que quieras desarrollar, no dudes en escribirme,",

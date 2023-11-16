@@ -13,7 +13,7 @@ import bgProjectFive from "@/public/projects/project-five.png";
 import bgProjectSix from "@/public/projects/project-six.png";
 import { GlobalStateContext } from "./context";
 import { t } from "@/app/lib/translation";
-// import FeedInstagram from "./components/FeedInstagram";
+import FeedInstagram from "./components/FeedInstagram";
 
 const MAP_SKILLS: Array<{
   name: string;
@@ -312,13 +312,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <section className={styles.borderB}>
+      <section className={styles.borderB}>
         <div className={styles.container}>
           <div className={styles.wrapper}>
             <FeedInstagram />
           </div>
         </div>
-      </section> */}
+      </section>
     </main>
   );
 }
