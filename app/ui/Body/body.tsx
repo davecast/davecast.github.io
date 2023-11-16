@@ -28,25 +28,6 @@ const Body = ({ children }: BodyProps) => {
           className={joinClasses([
             styles.lang,
             styles.langL,
-            langSeleted !== "en" ? styles.langInactive : "",
-          ])}
-          onClick={() => {
-            if (langSeleted !== "en") {
-              dispatch({
-                type: LangTypes.SelectLang,
-                payload: {
-                  langSeleted: "en",
-                },
-              });
-            }
-          }}
-        >
-          <Image src={enImage.src} alt="Html 5" width={80} height={54} />
-        </div>
-        <div
-          className={joinClasses([
-            styles.lang,
-            styles.langR,
             langSeleted !== "es" ? styles.langInactive : "",
           ])}
           onClick={() => {
@@ -61,6 +42,25 @@ const Body = ({ children }: BodyProps) => {
           }}
         >
           <Image src={esImage.src} alt="Html 5" width={80} height={54} />
+        </div>
+        <div
+          className={joinClasses([
+            styles.lang,
+            styles.langR,
+            langSeleted !== "en" ? styles.langInactive : "",
+          ])}
+          onClick={() => {
+            if (langSeleted !== "en") {
+              dispatch({
+                type: LangTypes.SelectLang,
+                payload: {
+                  langSeleted: "en",
+                },
+              });
+            }
+          }}
+        >
+          <Image src={enImage.src} alt="Html 5" width={80} height={54} />
         </div>
       </div>
       <div className={styles.content}>{children}</div>
