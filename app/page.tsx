@@ -1,13 +1,18 @@
+"use client";
+
+import { useContext } from "react";
 import Image, { StaticImageData } from "next/image";
-import { joinClasses } from "./lib/utils";
+import { joinClasses } from "@/app/lib/utils";
 import stylesComponents from "@/app/ui/components.module.css";
-import styles from "./ui/page.module.css";
+import styles from "@/app/ui/page.module.css";
 import bgProjectOne from "@/public/projects/project-one.png";
 import bgProjectTwo from "@/public/projects/project-two.png";
 import bgProjectThree from "@/public/projects/project-three.png";
 import bgProjectFour from "@/public/projects/project-four.png";
 import bgProjectFive from "@/public/projects/project-five.png";
 import bgProjectSix from "@/public/projects/project-six.png";
+import { GlobalStateContext } from "./context";
+import { t } from "@/app/lib/translation";
 // import FeedInstagram from "./components/FeedInstagram";
 
 const MAP_SKILLS: Array<{
@@ -56,61 +61,64 @@ const MAP_SKILLS: Array<{
   },
 ];
 
-const MAP_PROJECTS: Array<{
-  name: string;
-  description: string;
-  image: StaticImageData;
-  link: string;
-  opacity?: number;
-}> = [
-  {
-    name: "Swearit",
-    description:
-      "Desarrollo de sitio web y aplicaciones web utilizando reactjs.",
-    image: bgProjectOne,
-    link: "https://www.swearit.io/",
-  },
-  {
-    name: "Big dog",
-    description:
-      "Desarrollo y diseño de e-commerce para una tienda de productos para mascotas.",
-    image: bgProjectTwo,
-    link: "https://bigdogmcbo.com/",
-    opacity: 0.9,
-  },
-  {
-    name: "María Naranjo",
-    description: "Desarrollo de página web de marca profesional.",
-    image: bgProjectThree,
-    link: "https://mjninsurance.com/",
-    opacity: 0.9,
-  },
-  {
-    name: "Deisocial",
-    description: "Desarrollo y diseño de página web de marca profesional.",
-    image: bgProjectFour,
-    link: "https://davecast.github.io/deisocial/",
-    opacity: 0.9,
-  },
-  {
-    name: "Bioverdi Natura",
-    description:
-      "Desarrollo y diseño de página web informativa sobre los servicios de la empresa.",
-    image: bgProjectFive,
-    link: "https://davecast.github.io/bioverdi/",
-    opacity: 0.9,
-  },
-  {
-    name: "Neuss",
-    description:
-      "Desarrollo y diseño de página web informativa sobre los servicios de la empresa.",
-    image: bgProjectSix,
-    link: "https://neuss-ts.com/",
-    opacity: 0.85,
-  },
-];
-
 export default function Home() {
+  const {
+    state: {
+      lang: { langSeleted },
+    },
+    dispatch,
+  } = useContext(GlobalStateContext);
+
+  const MAP_PROJECTS: Array<{
+    name: string;
+    description: string;
+    image: StaticImageData;
+    link: string;
+    opacity?: number;
+  }> = [
+    {
+      name: "Swearit",
+      description: t(langSeleted, "HomePage", "projectOne"),
+      image: bgProjectOne,
+      link: "https://www.swearit.io/",
+    },
+    {
+      name: "Big dog",
+      description: t(langSeleted, "HomePage", "projectTwo"),
+      image: bgProjectTwo,
+      link: "https://bigdogmcbo.com/",
+      opacity: 0.9,
+    },
+    {
+      name: "María Naranjo",
+      description: t(langSeleted, "HomePage", "projectThree"),
+      image: bgProjectThree,
+      link: "https://mjninsurance.com/",
+      opacity: 0.9,
+    },
+    {
+      name: "Deisocial",
+      description: t(langSeleted, "HomePage", "projectFour"),
+      image: bgProjectFour,
+      link: "https://davecast.github.io/deisocial/",
+      opacity: 0.9,
+    },
+    {
+      name: "Bioverdi Natura",
+      description: t(langSeleted, "HomePage", "projectFive"),
+      image: bgProjectFive,
+      link: "https://davecast.github.io/bioverdi/",
+      opacity: 0.9,
+    },
+    {
+      name: "Neuss",
+      description: t(langSeleted, "HomePage", "projectSix"),
+      image: bgProjectSix,
+      link: "https://neuss-ts.com/",
+      opacity: 0.85,
+    },
+  ];
+
   return (
     <main className={styles.main}>
       <section className={styles.borderB}>
@@ -130,7 +138,7 @@ export default function Home() {
                     stylesComponents.mBottom2,
                   ])}
                 >
-                  Sobre mí
+                  {t(langSeleted, "HomePage", "aboutMeTitle")}
                 </h2>
                 <p
                   className={joinClasses([
@@ -140,7 +148,7 @@ export default function Home() {
                     stylesComponents.mBottom2,
                   ])}
                 >
-                  Soy{" "}
+                  {t(langSeleted, "HomePage", "aboutMeI")}{" "}
                   <span
                     className={joinClasses([
                       stylesComponents.bold,
@@ -149,10 +157,7 @@ export default function Home() {
                   >
                     David Castillo
                   </span>{" "}
-                  un Desarrollador web y Diseñador Gráfico de Venezuela, que
-                  construye todo tipo de ideas interesantes. Tengo una pasión
-                  por crear experiencias web atractivas e intuitivas que
-                  satisfagan las necesidades de los usuarios.
+                  {t(langSeleted, "HomePage", "aboutMeTextOne")}
                 </p>
                 <p
                   className={joinClasses([
@@ -162,7 +167,7 @@ export default function Home() {
                     stylesComponents.mBottom2,
                   ])}
                 >
-                  También me gusta{" "}
+                  {t(langSeleted, "HomePage", "soLikeToo")}{" "}
                   <a
                     className={joinClasses([
                       stylesComponents.link,
@@ -172,17 +177,16 @@ export default function Home() {
                     href="https://instagram.com/davecast"
                     target="_blank"
                   >
-                    enseñar acerca del desarrollo web
+                    {t(langSeleted, "HomePage", "soLikeTeach")}
                   </a>{" "}
-                  compartiendo mis conocimientos con los demás y aprender más
-                  sobre matemáticas e inteligencia artificial.
+                  {t(langSeleted, "HomePage", "soLikeTextTwo")}
                 </p>
                 <a
                   href="https://www.linkedin.com/in/davecast/"
                   target="_blank"
                   className={stylesComponents.button}
                 >
-                  Aprende más sobre mí
+                  {t(langSeleted, "HomePage", "aboutButton")}
                 </a>
               </div>
               <div
@@ -208,7 +212,7 @@ export default function Home() {
                     stylesComponents.mBottom15,
                   ])}
                 >
-                  HABILIDADES
+                  {t(langSeleted, "HomePage", "skills")}
                 </h4>
                 <div
                   className={joinClasses([
@@ -235,7 +239,7 @@ export default function Home() {
                     stylesComponents.grayDark,
                   ])}
                 >
-                  Conoce mas de mis habilidades{" "}
+                  {t(langSeleted, "HomePage", "seeMore")}{" "}
                   <a
                     className={joinClasses([
                       stylesComponents.link,
@@ -245,7 +249,7 @@ export default function Home() {
                     href="https://www.linkedin.com/in/davecast/"
                     target="_blank"
                   >
-                    aquí
+                    {t(langSeleted, "HomePage", "here")}
                   </a>{" "}
                 </p>
               </div>
@@ -264,7 +268,7 @@ export default function Home() {
                   stylesComponents.mBottom15,
                 ])}
               >
-                ÚLTIMOS PROYECTOS
+                {t(langSeleted, "HomePage", "projectTitle")}
               </h4>
               <div className={styles.projects}>
                 {MAP_PROJECTS.map((item, index) => (
@@ -298,7 +302,7 @@ export default function Home() {
                         target="_blank"
                         className={stylesComponents.button}
                       >
-                        Ir a proyecto
+                        {t(langSeleted, "HomePage", "seeProject")}
                       </a>
                     </div>
                   </div>
