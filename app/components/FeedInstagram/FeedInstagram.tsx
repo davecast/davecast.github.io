@@ -10,8 +10,6 @@ import Image from "next/image";
 const FeedInstagram = () => {
   const { loadingFeed, feedInstagram } = useFeedInstagram();
 
-  console.log(feedInstagram);
-
   return (
     <div className={joinClasses([styles.feedInstagram])}>
       <h4
