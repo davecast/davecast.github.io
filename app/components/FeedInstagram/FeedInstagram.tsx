@@ -1,13 +1,22 @@
 "use client";
 
-import React from "react";
+import React, { useContext } from "react";
 import useFeedInstagram from "@/app/hooks/useFeedInstagram";
 import styles from "./FeedInstagram.module.css";
 import stylesComponents from "@/app/ui/components.module.css";
 import { joinClasses } from "@/app/lib/utils";
 import Image from "next/image";
+import { GlobalStateContext } from "@/app/context";
+import { t } from "@/app/lib/translation";
 
 const FeedInstagram = () => {
+  const {
+    state: {
+      lang: { langSeleted },
+    },
+    dispatch,
+  } = useContext(GlobalStateContext);
+
   const { loadingFeed, feedInstagram } = useFeedInstagram();
 
   return (
@@ -19,7 +28,7 @@ const FeedInstagram = () => {
           stylesComponents.mBottom15,
         ])}
       >
-        ULTIMOS POST
+        {t(langSeleted, "HomePage", "feedInstagramTitle")}
       </h4>
       <div className={joinClasses([styles.content])}>
         {loadingFeed ? (
