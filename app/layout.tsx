@@ -5,7 +5,7 @@ import LayoutClient from "@/app/ui/LayoutClient";
 export const metadata: Metadata = {
   title: "David Castillo | Portfolio",
   description:
-    "Hola me llamo David Castillo soy desarrollador web y diseñador gráfico, tienes aguna idea contactame",
+    "Hola me llamo David Castillo soy desarrollador web y diseñador gráfico, tienes alguna idea contactame",
 };
 
 export default function RootLayout({
