@@ -11,6 +11,8 @@ import bgProjectThree from "@/public/projects/project-three.png";
 import bgProjectFour from "@/public/projects/project-four.png";
 import bgProjectFive from "@/public/projects/project-five.png";
 import bgProjectSix from "@/public/projects/project-six.png";
+import bgProjectLight from "@/public/background-projects.svg";
+import bgProjectDark from "@/public/background-projects-dark.svg";
 import { GlobalStateContext } from "./context";
 import { t } from "@/app/lib/translation";
 import FeedInstagram from "./components/FeedInstagram";
@@ -65,6 +67,7 @@ export default function Home() {
   const {
     state: {
       lang: { langSelected },
+      theme: { themeSelected },
     },
     dispatch,
   } = useContext(GlobalStateContext);
@@ -260,7 +263,16 @@ export default function Home() {
       <section className={styles.borderB}>
         <div className={styles.container}>
           <div className={styles.wrapper}>
-            <div className={styles.projectsBackground}>
+            <div
+              className={styles.projectsBackground}
+              style={{
+                backgroundImage: `url(${
+                  themeSelected === "dark"
+                    ? bgProjectDark.src
+                    : bgProjectLight.src
+                })`,
+              }}
+            >
               <h4
                 className={joinClasses([
                   stylesComponents.h4,
