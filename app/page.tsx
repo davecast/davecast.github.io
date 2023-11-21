@@ -11,6 +11,8 @@ import bgProjectThree from "@/public/projects/project-three.png";
 import bgProjectFour from "@/public/projects/project-four.png";
 import bgProjectFive from "@/public/projects/project-five.png";
 import bgProjectSix from "@/public/projects/project-six.png";
+import bgProjectLight from "@/public/background-projects.svg";
+import bgProjectDark from "@/public/background-projects-dark.svg";
 import { GlobalStateContext } from "./context";
 import { t } from "@/app/lib/translation";
 import FeedInstagram from "./components/FeedInstagram";
@@ -64,7 +66,8 @@ const MAP_SKILLS: Array<{
 export default function Home() {
   const {
     state: {
-      lang: { langSeleted },
+      lang: { langSelected },
+      theme: { themeSelected },
     },
     dispatch,
   } = useContext(GlobalStateContext);
@@ -78,41 +81,41 @@ export default function Home() {
   }> = [
     {
       name: "Swearit",
-      description: t(langSeleted, "HomePage", "projectOne"),
+      description: t(langSelected, "HomePage", "projectOne"),
       image: bgProjectOne,
       link: "https://www.swearit.io/",
     },
     {
       name: "Big dog",
-      description: t(langSeleted, "HomePage", "projectTwo"),
+      description: t(langSelected, "HomePage", "projectTwo"),
       image: bgProjectTwo,
       link: "https://bigdogmcbo.com/",
       opacity: 0.9,
     },
     {
       name: "María Naranjo",
-      description: t(langSeleted, "HomePage", "projectThree"),
+      description: t(langSelected, "HomePage", "projectThree"),
       image: bgProjectThree,
       link: "https://mjninsurance.com/",
       opacity: 0.9,
     },
     {
       name: "Deisocial",
-      description: t(langSeleted, "HomePage", "projectFour"),
+      description: t(langSelected, "HomePage", "projectFour"),
       image: bgProjectFour,
       link: "https://davecast.github.io/deisocial/",
       opacity: 0.9,
     },
     {
       name: "Bioverdi Natura",
-      description: t(langSeleted, "HomePage", "projectFive"),
+      description: t(langSelected, "HomePage", "projectFive"),
       image: bgProjectFive,
       link: "https://davecast.github.io/bioverdi/",
       opacity: 0.9,
     },
     {
       name: "Neuss",
-      description: t(langSeleted, "HomePage", "projectSix"),
+      description: t(langSelected, "HomePage", "projectSix"),
       image: bgProjectSix,
       link: "https://neuss-ts.com/",
       opacity: 0.85,
@@ -138,7 +141,7 @@ export default function Home() {
                     stylesComponents.mBottom2,
                   ])}
                 >
-                  {t(langSeleted, "HomePage", "aboutMeTitle")}
+                  {t(langSelected, "HomePage", "aboutMeTitle")}
                 </h2>
                 <p
                   className={joinClasses([
@@ -148,7 +151,7 @@ export default function Home() {
                     stylesComponents.mBottom2,
                   ])}
                 >
-                  {t(langSeleted, "HomePage", "aboutMeI")}{" "}
+                  {t(langSelected, "HomePage", "aboutMeI")}{" "}
                   <span
                     className={joinClasses([
                       stylesComponents.bold,
@@ -157,7 +160,7 @@ export default function Home() {
                   >
                     David Castillo
                   </span>{" "}
-                  {t(langSeleted, "HomePage", "aboutMeTextOne")}
+                  {t(langSelected, "HomePage", "aboutMeTextOne")}
                 </p>
                 <p
                   className={joinClasses([
@@ -167,7 +170,7 @@ export default function Home() {
                     stylesComponents.mBottom2,
                   ])}
                 >
-                  {t(langSeleted, "HomePage", "soLikeToo")}{" "}
+                  {t(langSelected, "HomePage", "soLikeToo")}{" "}
                   <a
                     className={joinClasses([
                       stylesComponents.link,
@@ -177,16 +180,16 @@ export default function Home() {
                     href="https://instagram.com/davecast"
                     target="_blank"
                   >
-                    {t(langSeleted, "HomePage", "soLikeTeach")}
+                    {t(langSelected, "HomePage", "soLikeTeach")}
                   </a>{" "}
-                  {t(langSeleted, "HomePage", "soLikeTextTwo")}
+                  {t(langSelected, "HomePage", "soLikeTextTwo")}
                 </p>
                 <a
                   href="https://www.linkedin.com/in/davecast/"
                   target="_blank"
                   className={stylesComponents.button}
                 >
-                  {t(langSeleted, "HomePage", "aboutButton")}
+                  {t(langSelected, "HomePage", "aboutButton")}
                 </a>
               </div>
               <div
@@ -212,7 +215,7 @@ export default function Home() {
                     stylesComponents.mBottom15,
                   ])}
                 >
-                  {t(langSeleted, "HomePage", "skills")}
+                  {t(langSelected, "HomePage", "skills")}
                 </h4>
                 <div
                   className={joinClasses([
@@ -239,7 +242,7 @@ export default function Home() {
                     stylesComponents.grayDark,
                   ])}
                 >
-                  {t(langSeleted, "HomePage", "seeMore")}{" "}
+                  {t(langSelected, "HomePage", "seeMore")}{" "}
                   <a
                     className={joinClasses([
                       stylesComponents.link,
@@ -249,7 +252,7 @@ export default function Home() {
                     href="https://www.linkedin.com/in/davecast/"
                     target="_blank"
                   >
-                    {t(langSeleted, "HomePage", "here")}
+                    {t(langSelected, "HomePage", "here")}
                   </a>{" "}
                 </p>
               </div>
@@ -260,7 +263,16 @@ export default function Home() {
       <section className={styles.borderB}>
         <div className={styles.container}>
           <div className={styles.wrapper}>
-            <div className={styles.projectsBackground}>
+            <div
+              className={styles.projectsBackground}
+              style={{
+                backgroundImage: `url(${
+                  themeSelected === "dark"
+                    ? bgProjectDark.src
+                    : bgProjectLight.src
+                })`,
+              }}
+            >
               <h4
                 className={joinClasses([
                   stylesComponents.h4,
@@ -268,7 +280,7 @@ export default function Home() {
                   stylesComponents.mBottom15,
                 ])}
               >
-                {t(langSeleted, "HomePage", "projectTitle")}
+                {t(langSelected, "HomePage", "projectTitle")}
               </h4>
               <div className={styles.projects}>
                 {MAP_PROJECTS.map((item, index) => (
@@ -302,7 +314,7 @@ export default function Home() {
                         target="_blank"
                         className={stylesComponents.button}
                       >
-                        {t(langSeleted, "HomePage", "seeProject")}
+                        {t(langSelected, "HomePage", "seeProject")}
                       </a>
                     </div>
                   </div>

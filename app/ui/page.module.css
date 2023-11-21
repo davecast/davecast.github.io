@@ -50,7 +50,9 @@
 .projectsBackground {
   padding: 2rem;
   background-image: url(../../public/background-projects.svg);
+  /* background-image: url(../../public/background-projects-dark.svg); */
 }
+
 .projects {
   display: grid;
   grid-template: 1fr / repeat(3, 1fr);
@@ -61,6 +63,7 @@
   display: flex;
   border-radius: 1rem;
   padding: 1.5rem;
+  overflow: hidden;
 }
 .projectOverlay {
   position: absolute;

@@ -12,7 +12,7 @@ import { t } from "@/app/lib/translation";
 const FeedInstagram = () => {
   const {
     state: {
-      lang: { langSeleted },
+      lang: { langSelected },
     },
     dispatch,
   } = useContext(GlobalStateContext);
@@ -28,7 +28,7 @@ const FeedInstagram = () => {
           stylesComponents.mBottom15,
         ])}
       >
-        {t(langSeleted, "HomePage", "feedInstagramTitle")}
+        {t(langSelected, "HomePage", "feedInstagramTitle")}
       </h4>
       <div className={joinClasses([styles.content])}>
         {loadingFeed ? (

@@ -1,11 +1,16 @@
 import { LangState } from "../reducers/lang";
+import { ThemeState } from "../reducers/theme";
 
 export type InitialStateType = {
   lang: LangState;
+  theme: ThemeState;
 };
 
 export const initialState: InitialStateType = {
   lang: {
-    langSeleted: "es",
+    langSelected: "es",
+  },
+  theme: {
+    themeSelected: "light",
   },
 };

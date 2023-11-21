@@ -6,7 +6,7 @@
   position: fixed;
   display: grid;
   width: 70px;
-  height: 24px;
+  height: 28px;
   grid-template: 1fr / 35px 35px;
   right: calc(calc(100vw - 100rem) / 2);
   bottom: 5rem;

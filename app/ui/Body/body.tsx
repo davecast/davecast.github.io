@@ -16,7 +16,7 @@ interface BodyProps {
 const Body = ({ children }: BodyProps) => {
   const {
     state: {
-      lang: { langSeleted },
+      lang: { langSelected },
     },
     dispatch,
   } = useContext(GlobalStateContext);
@@ -28,14 +28,14 @@ const Body = ({ children }: BodyProps) => {
           className={joinClasses([
             styles.lang,
             styles.langL,
-            langSeleted !== "es" ? styles.langInactive : "",
+            langSelected !== "es" ? styles.langInactive : "",
           ])}
           onClick={() => {
-            if (langSeleted !== "es") {
+            if (langSelected !== "es") {
               dispatch({
                 type: LangTypes.SelectLang,
                 payload: {
-                  langSeleted: "es",
+                  langSelected: "es",
                 },
               });
             }
@@ -47,14 +47,14 @@ const Body = ({ children }: BodyProps) => {
           className={joinClasses([
             styles.lang,
             styles.langR,
-            langSeleted !== "en" ? styles.langInactive : "",
+            langSelected !== "en" ? styles.langInactive : "",
           ])}
           onClick={() => {
-            if (langSeleted !== "en") {
+            if (langSelected !== "en") {
               dispatch({
                 type: LangTypes.SelectLang,
                 payload: {
-                  langSeleted: "en",
+                  langSelected: "en",
                 },
               });
             }

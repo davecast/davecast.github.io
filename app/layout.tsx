@@ -1,10 +1,6 @@
-import Header from "@/app/ui/Header";
-import Footer from "@/app/ui/Footer";
-import Body from "@/app/ui/Body";
 import type { Metadata } from "next";
-import { roboto, raleway } from "@/app/ui/fonts";
 import "@/app/ui/globals.css";
-import GlobalProvider from "@/app/context/GlobalContext";
+import LayoutClient from "@/app/ui/LayoutClient";
 
 export const metadata: Metadata = {
   title: "David Castillo | Portfolio",
@@ -17,17 +13,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={`${roboto.className} ${raleway.variable} antialiased`}>
-        <GlobalProvider>
-          <>
-            <Header />
-            <Body>{children}</Body>
-            <Footer />
-          </>
-        </GlobalProvider>
-      </body>
-    </html>
-  );
+  return <LayoutClient>{children}</LayoutClient>;
 }

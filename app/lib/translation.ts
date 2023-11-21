@@ -40,6 +40,8 @@ const LANG_LIST: LangList = {
       title: "David Castillo Frontend developer and graphic designer",
       logo: "Davecast identifier",
       menuLinks: "Links menu",
+      themeDark: "Dark",
+      themeLight: "Light",
     },
     NotFound: {
       text: "Oops... We didn't find what you are looking for",
@@ -82,6 +84,8 @@ const LANG_LIST: LangList = {
       title: "David Castillo Desarrollador web y diseñador gráfico",
       logo: "Davecast identificador",
       menuLinks: "Menu de links",
+      themeDark: "Oscuro",
+      themeLight: "Claro",
     },
     NotFound: {
       text: "Ups.. No encontramos lo que buscas",
