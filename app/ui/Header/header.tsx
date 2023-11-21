@@ -13,6 +13,7 @@ import TwitchIcon from "@/app/components/icons/Twitch";
 import TiktokIcon from "@/app/components/icons/Tiktok";
 import XIcon from "@/app/components/icons/X";
 import { GlobalStateContext } from "@/app/context";
+import LinkIcon from "@/app/components/icons/Link";
 
 const Header = () => {
   const isMedia768 = useMediaQuery(768);
@@ -44,21 +45,27 @@ const Header = () => {
               />
             </div>
             {isMedia768 && (
-              <div
-                tabIndex={0}
-                className={`${style.headerMenu} ${
-                  active && style.headerMenuActive
-                }`}
-                onClick={() => {
-                  setActive(!active);
-                }}
-              >
-                <Image
+              <div className={style.mobileHeader}>
+                <div className={style.themeSelector}>
+                  <ThemeSelector />
+                </div>
+                <div
+                  tabIndex={0}
+                  className={`${style.headerMenu} ${
+                    active && style.headerMenuActive
+                  }`}
+                  onClick={() => {
+                    setActive(!active);
+                  }}
+                >
+                  {/* <Image
                   width={16}
                   height={16}
                   src="/link.svg"
                   alt="Menu de links"
-                />
+                /> */}
+                  <LinkIcon />
+                </div>
               </div>
             )}
             <div
@@ -66,10 +73,15 @@ const Header = () => {
                 active && style.headerRightActive
               }`}
             >
-              <div className={style.themeSelector}>
-                <ThemeSelector />
-              </div>
-              <div className={style.separator}></div>
+              {!isMedia768 && (
+                <>
+                  <div className={style.themeSelector}>
+                    <ThemeSelector />
+                  </div>
+                  <div className={style.separator}></div>
+                </>
+              )}
+
               <div className={style.socials}>
                 <a
                   className={style.social}
