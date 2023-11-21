@@ -9,7 +9,7 @@ import { t } from "@/app/lib/translation";
 const Footer = () => {
   const {
     state: {
-      lang: { langSeleted },
+      lang: { langSelected },
     },
     dispatch,
   } = useContext(GlobalStateContext);
@@ -20,9 +20,9 @@ const Footer = () => {
         <div className={stylePage.container}>
           <div className={style.wrapper}>
             <p className={style.text}>
-              {t(langSeleted, "Footer", "text")}{" "}
+              {t(langSelected, "Footer", "text")}{" "}
               <a href="mailto:hola.davecast@gmail.com">
-                {t(langSeleted, "Footer", "link")}
+                {t(langSelected, "Footer", "link")}
               </a>
             </p>
             <p className={style.copy}>2023 © David Castillo</p>

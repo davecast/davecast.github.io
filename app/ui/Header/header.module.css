@@ -22,10 +22,14 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 1rem;
 }
 .themeSelector {
 }
 .separator {
+  width: 2px;
+  height: 2rem;
+  background-color: var(--color-gray);
 }
 .socials {
   display: flex;
@@ -47,9 +51,10 @@
 .social:active {
   background-color: var(--color-primary-push);
 }
-.social img {
-  width: 14px;
-  height: 14px;
+.social svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-white);
 }
 .headerMenu {
   display: none;
